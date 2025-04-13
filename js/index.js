@@ -18,7 +18,7 @@ const defaultCards = [
   { name: "YouTube", href: "https://www.youtube.com/", icon: "favicon/YouTube.png" },
 
   // 开发 & 学习
-  { name: "GItHub", href: "https://github.com/OfSong", icon: "favicon/GitHub.png" },
+  { name: "GItHub", href: "https://github.com/ahlson", icon: "favicon/GitHub.png" },
   { name: "Gitee", href: "https://gitee.com/Ahlson", icon: "favicon/gitee.ico" },
   { name: "CSDN", href: "https://blog.csdn.net/m0_62518864", icon: "favicon/CSDN.ico" },
   { name: "ChatGPT", href: "https://chatgpt.com/", icon: "favicon/ChatGPT.ico" },
