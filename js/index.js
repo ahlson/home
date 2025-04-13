@@ -36,10 +36,10 @@ const defaultCards = [
   { name: "hifini", href: "https://hifini.com/", icon: "favicon/hifini.png" },
 
    //time
-  { name: "Time", href: "./time.html", icon: "favicon/time.png" }
+  { name: "LZWL", href: "#", icon: "favicon/work.ico" },
   { name: "ALive", href: "https://www.szalive.com/aliveplatform/index.html#/login", icon: "favicon/szalive.ico" },
   { name: "Dueros", href: "https://dueros.baidu.com/business/emp/view/project/list", icon: "favicon/dueros.ico" },
-  { name: "LZWL", href: "#", icon: "favicon/work.ico" },
+  { name: "Time", href: "./time.html", icon: "favicon/time.png" }
   // { name: "", href: "", icon: "favicon/" },
 ];
 
