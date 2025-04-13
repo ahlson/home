@@ -21,15 +21,22 @@ const defaultCards = [
   { name: "GItHub", href: "https://github.com/ahlson", icon: "favicon/GitHub.png" },
   { name: "Gitee", href: "https://gitee.com/Ahlson", icon: "favicon/gitee.ico" },
   { name: "CSDN", href: "https://blog.csdn.net/m0_62518864", icon: "favicon/CSDN.ico" },
-  { name: "ChatGPT", href: "https://chatgpt.com/", icon: "favicon/ChatGPT.ico" },
-
+  { name: "Linux Do", href: "https://linux.do/", icon: "favicon/linuxdo.png" },
+  
   //   其它
-
-  { name: "frp client", href: "http://8.130.64.208:5000", icon: "favicon/frp.ico" },
-  { name: "Aliyun", href: "https://ecs.console.aliyun.com/server/", icon: "favicon/aliyun.ico" },
+  // { name: "", href: "", icon: "favicon/" },
+  { name: "Apple", href: "https://www.apple.com/", icon: "favicon/apple.ico" },
   { name: "iCloud", href: "https://www.icloud.com/", icon: "favicon/iCould.png" },
+  { name: "Aliyun", href: "https://ecs.console.aliyun.com/server/", icon: "favicon/aliyun.ico" },
   { name: "Translate", href: "https://fanyi.baidu.com/", icon: "favicon/translate.ico" },
+
+  //工具
+  { name: "ChatGPT", href: "https://chatgpt.com/", icon: "favicon/ChatGPT.ico" },
+  { name: "DeepSeek", href: "https://chat.deepseek.com/", icon: "favicon/deepseek.svg" },
+  { name: "frp client", href: "http://8.130.64.208:5000", icon: "favicon/frp.ico" },
   { name: "hifini", href: "https://hifini.com/", icon: "favicon/hifini.png" },
+
+   //time
   { name: "Time", href: "./time.html", icon: "favicon/time.png" }
 ];
 
