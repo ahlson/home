@@ -24,7 +24,6 @@ const defaultCards = [
   { name: "Linux Do", href: "https://linux.do/", icon: "favicon/linuxdo.png" },
   
   //   其它
-  // { name: "", href: "", icon: "favicon/" },
   { name: "Apple", href: "https://www.apple.com/", icon: "favicon/apple.ico" },
   { name: "iCloud", href: "https://www.icloud.com/", icon: "favicon/iCould.png" },
   { name: "Aliyun", href: "https://ecs.console.aliyun.com/server/", icon: "favicon/aliyun.ico" },
@@ -38,6 +37,10 @@ const defaultCards = [
 
    //time
   { name: "Time", href: "./time.html", icon: "favicon/time.png" }
+  { name: "ALive", href: "https://www.szalive.com/aliveplatform/index.html#/login", icon: "favicon/szalive.ico" },
+  { name: "Dueros", href: "https://dueros.baidu.com/business/emp/view/project/list", icon: "favicon/dueros.ico" },
+  { name: "LZWL", href: "#", icon: "favicon/work.ico" },
+  // { name: "", href: "", icon: "favicon/" },
 ];
 
 
