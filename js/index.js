@@ -28,9 +28,9 @@ const defaultCards = [
   { name: "frp client", href: "http://8.130.64.208:5000", icon: "favicon/frp.ico" },
   { name: "Aliyun", href: "https://ecs.console.aliyun.com/server/", icon: "favicon/aliyun.ico" },
   { name: "iCloud", href: "https://www.icloud.com/", icon: "favicon/iCould.png" },
-  { name: "Time", href: "./time.html", icon: "favicon/time.png" },
-  { name: "hifini", href: "https://hifini.com/", icon: "favicon/hifini.png" }
-
+  { name: "Translate", href: "https://fanyi.baidu.com/", icon: "favicon/translate.png" },
+  { name: "hifini", href: "https://hifini.com/", icon: "favicon/hifini.png" },
+  { name: "Time", href: "./time.html", icon: "favicon/time.png" }
 ];
 
 
