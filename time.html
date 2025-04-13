@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="http://192.168.4.17:15244/p/Home/favicon/time.png?sign=7e40f344cDNPZwCGY_Ny93-TVJcG-dQ2vNt65TyHs18=:0" />
+    <title>倒计时</title>
+    <link rel="stylesheet" href="../css/calendar.css" />
+    <link rel="stylesheet" href="../css/time.css" />
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #ffffff;
+            font-family: 'Arial', sans-serif;
+            color: #000000;
+        }
+
+        .countdown-container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .countdown {
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #000000;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .countdown span {
+            display: inline-block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .bounce {
+            transform: translateY(-10px);
+        }
+
+        .message {
+            font-size: 1.8rem;
+            color: #007bff;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+            text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <div class="countdown">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+        <div id="message" class="message">下班了快跑！</div>
+      <!--日历start-->
+      <div id="calendar"></div>
+      <!--日历end-->
+      
+      <!--时钟start-->
+      <div id="clock">
+          <div class="clock-face">
+            <div class="hand hour"></div>
+            <div class="hand minute"></div>
+            <div class="hand second"></div>
+          </div>
+      </div>
+      <!--时钟end-->
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const targetTime = new Date();
+            targetTime.setHours(17, 30, 0, 0);
+            const now = new Date();
+            let timeRemaining = targetTime - now;
+
+            if (timeRemaining <= 0) {
+                document.getElementById('message').style.display = 'block';
+                clearInterval(countdownInterval);
+                return;
+            }
+
+            const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            updateTimeElement('hours', hours);
+            updateTimeElement('minutes', minutes);
+            updateTimeElement('seconds', seconds);
+        }
+
+        function updateTimeElement(id, newValue) {
+            const element = document.getElementById(id);
+            if (element.textContent !== String(newValue).padStart(2, '0')) {
+                element.textContent = String(newValue).padStart(2, '0');
+                element.classList.add('bounce');
+                setTimeout(() => element.classList.remove('bounce'), 300);
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+    <script src="../js/calendar.js"></script>
+    <script src="../js/time.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/*time.css*/
+
+#clock {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 280px;
+  height: 280px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.clock-face {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #eee;
+  border-radius: 50%;
+  position: relative;
+}
+
+.hand {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: #333;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 50%;
+  transition: transform 0.05s ease-in-out;
+}
+
+.hand.hour {
+  width: 30%;
+  height: 4px;
+  background: #222;
+}
+
+.hand.minute {
+  width: 45%;
+  height: 3px;
+  background: #444;
+}
+
+.hand.second {
+  width: 48%;
+  height: 2px;
+  background: red;
+}
+
+        /* 当页面宽度小于800px时，隐藏日历 */
+    @media (max-width: 800px) {
+      #clock {
+        display: none;
+      }
+    }

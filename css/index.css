@@ -1,0 +1,104 @@
+/*index.css*/
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    #login, #dashboard {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+/*       height: 100vh; */
+      padding: 20px;
+    }
+
+    #login.active, #dashboard.active {
+      display: flex;
+    }
+
+    input[type="password"] {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 250px;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .icon img {
+      width: 32px;
+      height: 32px;
+/*      border-radius: 8px;*/
+    }
+
+    .name {
+      font-size: 16px;
+      /*color: #333;*/
+    }
+    
+/* 深色 / 浅色模式切换*/
+/* 加在全局 CSS 中 */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #ffffff; /* 白色背景用于日间模式 */
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --card-bg: #1e1e1e; /* 深灰背景用于夜间模式 */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 让白卡片看起来浮起来 */
+  border-radius: 10px;
+  padding: 16px;
+}

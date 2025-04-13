@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="http://192.168.4.17:15244/p/Home/favicon/favicon.ico?sign=HP_G4EO0jXY4TVmBA21Ka73CeA2I3OkkQCLDQIZRmS8=:0" />
+  <title>小宋的导航页</title>
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+<body>
+  <div id="login" class="active">
+    <div>
+      <input type="password" id="password" placeholder="请输入密码" autofocus />
+      <div class="error" id="error"></div>
+    </div>
+  </div>
+
+  <div id="dashboard">
+    <h2 style="margin-top: 30px;">🧭 Ahlson's Navigation Page</h2>
+    <div class="cards" id="cards"></div>
+  </div>
+  
+  <!-- 放在页面右下角 -->
+<button id="themeToggle" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 8px 12px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+">🌓</button>
+
+  
+  
+  <script src="../js/index.js"></script>
+</body>
+</html>
