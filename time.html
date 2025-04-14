@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>我的主页</title>
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="favicon/work.ico" />
   <style>
     :root {
       --bg-color: #f5f5f5;
@@ -167,7 +167,7 @@
 
     .search-container {
       position: fixed;
-      margin: 275px 0px;
+      margin: 270px 0px;
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
@@ -175,9 +175,11 @@
     }
 
     .search-form {
+    width: 388px;
+    height: 38px;
       display: flex;
       background-color: var(--card-bg);
-      border-radius: 8px;
+      border-radius: 20px;
       padding: 4px 8px;
       box-shadow: var(--card-shadow);
     }
@@ -211,6 +213,7 @@
       padding: 16px;
       text-align: center;
       transition: transform 0.2s;
+      text-decoration: none;
     }
 
     .nav-card:hover {
@@ -236,9 +239,9 @@
   <div class="search-container">
     <form class="search-form" onsubmit="handleSearch(event)">
       <select id="engine">
+        <option value="https://www.bing.com/search?q=" selected>Bing</option>
         <option value="https://www.google.com/search?q=">Google</option>
         <option value="https://www.baidu.com/s?wd=">Baidu</option>
-        <option value="https://www.bing.com/search?q=">Bing</option>
       </select>
       <input id="searchInput" type="text" placeholder="Search..." autofocus />
     </form>
@@ -264,7 +267,7 @@
   </div>
 
   <div class="countdown-card">
-    <div class="countdown-title">距离下班还有</div>
+    <div class="countdown-title" id="countdownTitle">距离下班还有</div>
     <div class="countdown-time" id="countdownTime"></div>
   </div>
 
@@ -275,6 +278,14 @@
       { name: "LZWL", href: "#", icon: "favicon/work.ico" },
       { name: "ALive", href: "https://www.szalive.com/aliveplatform/index.html#/login", icon: "favicon/szalive.ico" },
       { name: "Dueros", href: "https://dueros.baidu.com/business/emp/view/project/list", icon: "favicon/dueros.ico" },
+      { name: "Douyin", href: "https://www.douyin.com/user/MS4wLjABAAAAS6LTta1Q5qiDVIgJbcOmFJP45KrtfZ5JrQ1qB1K1tMWQh642KY4feikZXgbkpSM8?from_tab_name=main", icon: "favicon/douyin.png" },
+      { name: "BiliBili", href: "https://space.bilibili.com/396913123", icon: "favicon/bilibili.ico" },
+      { name: "Spotify", href: "https://open.spotify.com/user/31keo23jnkoqd5ctrbmrm5nailkq?si=XtQFg9baT7mAn9b_8_zQ8w", icon: "favicon/Spotify.png" },
+      { name: "YouTube", href: "https://www.youtube.com/", icon: "favicon/YouTube.png" },
+      { name: "ChatGPT", href: "https://chatgpt.com/", icon: "favicon/ChatGPT.ico" },
+      { name: "DeepSeek", href: "https://chat.deepseek.com/", icon: "favicon/deepseek.svg" },
+      { name: "Translate", href: "https://fanyi.baidu.com/", icon: "favicon/translate.ico" },
+      { name: "Alist", href: "http://8.130.64.208:5002", icon: "favicon/alisst.svg" },
     ];
 
     function renderNav() {
@@ -298,7 +309,7 @@
 
     const workStart = [8, 0];
     const workEnd = [17, 30];
-    const startWeekDate = new Date("2025-04-14");
+    const startWeekDate = new Date("2024-12-27");
     function isRestDay(date) {
       const day = date.getDay();
       const weekNum = Math.floor((date - startWeekDate) / (7 * 86400000));
@@ -311,11 +322,13 @@
       end.setHours(workEnd[0], workEnd[1], 0, 0);
       const countdownTime = document.getElementById("countdownTime");
       if (isRestDay(now)) {
-        countdownTime.innerHTML = `<span class="rest-day">今天休息 😎</span>`;
+        document.getElementById("countdownTitle").textContent = "今天休息 😎";
+        countdownTime.innerHTML = "";
         return;
       }
       if (now >= end) {
-        countdownTime.textContent = "已经下班啦！🎉";
+        document.getElementById("countdownTitle").textContent = "今天已经下班啦！🎉";
+        countdownTime.innerHTML = "";
         return;
       }
       const diff = end - now;
@@ -356,49 +369,73 @@
       requestAnimationFrame(animate);
     }
 
-    function renderCalendar(year, month) {
-      const grid = document.getElementById("calendarGrid");
-      const label = document.getElementById("calendarMonthYear");
-      grid.innerHTML = "";
-      const days = ["日", "一", "二", "三", "四", "五", "六"];
-      days.forEach(d => {
-        const el = document.createElement("div");
-        el.style.fontWeight = "bold";
-        el.textContent = d;
-        grid.appendChild(el);
-      });
-      const firstDay = new Date(year, month, 1).getDay();
-      const daysInMonth = new Date(year, month + 1, 0).getDate();
-      const today = new Date();
-      for (let i = 0; i < firstDay; i++) grid.appendChild(document.createElement("div"));
-      for (let d = 1; d <= daysInMonth; d++) {
-        const date = new Date(year, month, d);
-        const div = document.createElement("div");
-        div.textContent = d;
-        if (date.toDateString() === today.toDateString()) div.classList.add("today");
-        if (isRestDay(date)) div.classList.add("rest");
-        grid.appendChild(div);
-      }
-      label.textContent = `${year}年${month + 1}月`;
-    }
+ let currentYear = new Date().getFullYear();
+let currentMonth = new Date().getMonth();
 
-    let currentMonth = new Date().getMonth();
-    let currentYear = new Date().getFullYear();
-    function changeMonth(offset) {
-      currentMonth += offset;
-      if (currentMonth < 0) {
-        currentMonth = 11;
-        currentYear--;
-      } else if (currentMonth > 11) {
-        currentMonth = 0;
-        currentYear++;
-      }
-      renderCalendar(currentYear, currentMonth);
-    }
+function changeMonth(direction) {
+  currentMonth += direction;
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  } else if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+  renderCalendar(currentYear, currentMonth);  // 更新日历
+}
 
-    initTheme();
+function renderCalendar(year, month) {
+  const grid = document.getElementById("calendarGrid");
+  const label = document.getElementById("calendarMonthYear");
+  grid.innerHTML = "";
+  const days = ["日", "一", "二", "三", "四", "五", "六"];
+  days.forEach(d => {
+    const el = document.createElement("div");
+    el.style.fontWeight = "bold";
+    el.textContent = d;
+    grid.appendChild(el);
+  });
+  const firstDay = new Date(year, month, 1);
+  const lastDate = new Date(year, month + 1, 0);
+  const lastDay = lastDate.getDay();
+  const prevMonthLastDate = new Date(year, month, 0).getDate();
+  let day = 1;
+  for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 7; j++) {
+      const el = document.createElement("div");
+      if (i === 0 && j < firstDay.getDay()) {
+        el.textContent = prevMonthLastDate - firstDay.getDay() + j + 1;
+        el.style.color = "#ccc";
+      } else if (day <= lastDate.getDate()) {
+        el.textContent = day++;
+        const currentDate = new Date(year, month, el.textContent);
+        if (currentDate.getDate() === new Date().getDate() &&
+            currentDate.getMonth() === new Date().getMonth() &&
+            currentDate.getFullYear() === new Date().getFullYear()) {
+          el.classList.add("today");
+        } else if (isRestDay(currentDate)) {
+          el.classList.add("rest");
+        }
+      } else {
+        el.style.visibility = "hidden";
+      }
+      grid.appendChild(el);
+    }
+  }
+  label.textContent = `${year}年${month + 1}月`;
+}
+
+function isRestDay(date) {
+  const day = date.getDay();
+  const weekNum = Math.floor((date - startWeekDate) / (7 * 86400000));
+  const isDouble = weekNum % 2 === 1;
+  return day === 0 || (day === 6 && isDouble);
+}
+
+
     renderNav();
-    renderCalendar(currentYear, currentMonth);
+    initTheme();
+    renderCalendar(new Date().getFullYear(), new Date().getMonth());
     animate();
   </script>
 </body>
