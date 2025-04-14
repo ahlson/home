@@ -1,117 +1,405 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="favicon/time.png" />
-    <title>倒计时</title>
-    <link rel="stylesheet" href="css/calendar.css" />
-    <link rel="stylesheet" href="css/time.css" />
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #ffffff;
-            font-family: 'Arial', sans-serif;
-            color: #000000;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的主页</title>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root {
+      --bg-color: #f5f5f5;
+      --text-color: #333;
+      --card-bg: #fff;
+      --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --today-color: #2196f3;
+      --rest-color: #4caf50;
+    }
 
-        .countdown-container {
-            text-align: center;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 400px;
-        }
+    .dark-mode {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+      --card-bg: #1e1e1e;
+      --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
 
-        .countdown {
-            font-size: 4rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-            color: #000000;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
 
-        .countdown span {
-            display: inline-block;
-            transition: transform 0.3s ease-in-out;
-        }
+    .clock-card, .countdown-card, .calendar-card, .theme-toggle-card {
+      position: fixed;
+      background: var(--card-bg);
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      z-index: 100;
+    }
 
-        .bounce {
-            transform: translateY(-10px);
-        }
+    .clock-card {
+      top: 20px;
+      right: 20px;
+      width: 140px;
+      text-align: center;
+    }
 
-        .message {
-            font-size: 1.8rem;
-            color: #007bff;
-            font-weight: bold;
-            margin-top: 20px;
-            display: none;
-            text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-        }
-    </style>
+    .calendar-card {
+      top: 20px;
+      left: 20px;
+      width: 260px;
+    }
+
+    .countdown-card {
+      bottom: 20px;
+      left: 20px;
+      width: 180px;
+      font-size: 14px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .theme-toggle-card {
+      right: 20px;
+      bottom: 20px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      cursor: pointer;
+      user-select: none;
+      padding: 2px;
+    }
+
+    .clock {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 8px;
+      border: 3px solid var(--text-color);
+      border-radius: 50%;
+    }
+
+    .hand {
+      position: absolute;
+      background-color: var(--text-color);
+      transform-origin: 50% 100%;
+      transform: rotate(0deg);
+    }
+
+    .hand.hour { width: 4px; height: 24px; top: 26px; left: 48px; }
+    .hand.minute { width: 3px; height: 36px; top: 14px; left: 48.5px; }
+    .hand.second { width: 2px; height: 44px; top: 6px; left: 49px; background-color: #ff4444; }
+
+    .center-dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #ff4444;
+      border-radius: 50%;
+      top: 46px;
+      left: 46px;
+    }
+
+    .digital-clock {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .countdown-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .countdown-time {
+      font-size: 16px;
+      color: var(--today-color);
+    }
+
+    .rest-day {
+      color: var(--rest-color);
+      font-weight: bold;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      font-size: 12px;
+    }
+
+    .calendar div {
+      text-align: center;
+      padding: 6px 0;
+      border-radius: 6px;
+    }
+
+    .calendar .today {
+      background-color: var(--today-color);
+      color: #fff;
+    }
+
+    .calendar .rest {
+      background-color: var(--rest-color);
+      color: #fff;
+    }
+
+    .calendar-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .calendar-nav button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      color: var(--text-color);
+    }
+
+    .search-container {
+      position: fixed;
+      margin: 275px 0px;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 200;
+    }
+
+    .search-form {
+      display: flex;
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 4px 8px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .search-form select,
+    .search-form input {
+      border: none;
+      background: none;
+      color: var(--text-color);
+      font-size: 14px;
+      outline: none;
+    }
+
+    .search-form select {
+      margin-right: 6px;
+    }
+
+    .nav-container {
+      max-width: 900px;
+      margin: 350px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .nav-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      padding: 16px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .nav-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .nav-card img {
+      width: 32px;
+      height: 32px;
+      margin-bottom: 8px;
+    }
+
+    .nav-card span {
+      display: block;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+  </style>
 </head>
 <body>
-    <div class="countdown-container">
-        <div class="countdown">
-            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
-        </div>
-        <div id="message" class="message">下班了快跑！</div>
-      <!--日历start-->
-      <div id="calendar"></div>
-      <!--日历end-->
-      
-      <!--时钟start-->
-      <div id="clock">
-          <div class="clock-face">
-            <div class="hand hour"></div>
-            <div class="hand minute"></div>
-            <div class="hand second"></div>
-          </div>
-      </div>
-      <!--时钟end-->
+  <div class="theme-toggle-card" onclick="toggleTheme()">🌓</div>
+
+  <div class="search-container">
+    <form class="search-form" onsubmit="handleSearch(event)">
+      <select id="engine">
+        <option value="https://www.google.com/search?q=">Google</option>
+        <option value="https://www.baidu.com/s?wd=">Baidu</option>
+        <option value="https://www.bing.com/search?q=">Bing</option>
+      </select>
+      <input id="searchInput" type="text" placeholder="Search..." autofocus />
+    </form>
+  </div>
+
+  <div class="clock-card">
+    <div class="clock">
+      <div class="hand hour"></div>
+      <div class="hand minute"></div>
+      <div class="hand second"></div>
+      <div class="center-dot"></div>
     </div>
+    <div class="digital-clock" id="digitalClock"></div>
+  </div>
 
-    <script>
-        function updateCountdown() {
-            const targetTime = new Date();
-            targetTime.setHours(17, 30, 0, 0);
-            const now = new Date();
-            let timeRemaining = targetTime - now;
+  <div class="calendar-card">
+    <div class="calendar-nav">
+      <button onclick="changeMonth(-1)">‹</button>
+      <span id="calendarMonthYear"></span>
+      <button onclick="changeMonth(1)">›</button>
+    </div>
+    <div class="calendar" id="calendarGrid"></div>
+  </div>
 
-            if (timeRemaining <= 0) {
-                document.getElementById('message').style.display = 'block';
-                clearInterval(countdownInterval);
-                return;
-            }
+  <div class="countdown-card">
+    <div class="countdown-title">距离下班还有</div>
+    <div class="countdown-time" id="countdownTime"></div>
+  </div>
 
-            const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  <div class="nav-container" id="navContainer"></div>
 
-            updateTimeElement('hours', hours);
-            updateTimeElement('minutes', minutes);
-            updateTimeElement('seconds', seconds);
-        }
+  <script>
+    const navItems = [
+      { name: "LZWL", href: "#", icon: "favicon/work.ico" },
+      { name: "ALive", href: "https://www.szalive.com/aliveplatform/index.html#/login", icon: "favicon/szalive.ico" },
+      { name: "Dueros", href: "https://dueros.baidu.com/business/emp/view/project/list", icon: "favicon/dueros.ico" },
+    ];
 
-        function updateTimeElement(id, newValue) {
-            const element = document.getElementById(id);
-            if (element.textContent !== String(newValue).padStart(2, '0')) {
-                element.textContent = String(newValue).padStart(2, '0');
-                element.classList.add('bounce');
-                setTimeout(() => element.classList.remove('bounce'), 300);
-            }
-        }
+    function renderNav() {
+      const container = document.getElementById("navContainer");
+      navItems.forEach(item => {
+        const card = document.createElement("a");
+        card.className = "nav-card";
+        card.href = item.href;
+        card.target = "_blank";
+        card.innerHTML = `<img src="${item.icon}" alt="icon" /><span>${item.name}</span>`;
+        container.appendChild(card);
+      });
+    }
 
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
-    <script src="js/calendar.js"></script>
-    <script src="js/time.js"></script>
+    function handleSearch(event) {
+      event.preventDefault();
+      const engine = document.getElementById("engine").value;
+      const query = document.getElementById("searchInput").value.trim();
+      if (query) window.open(engine + encodeURIComponent(query), "_blank");
+    }
+
+    const workStart = [8, 0];
+    const workEnd = [17, 30];
+    const startWeekDate = new Date("2025-04-14");
+    function isRestDay(date) {
+      const day = date.getDay();
+      const weekNum = Math.floor((date - startWeekDate) / (7 * 86400000));
+      const isDouble = weekNum % 2 === 1;
+      return day === 0 || (day === 6 && isDouble);
+    }
+
+    function updateCountdown(now = new Date()) {
+      const end = new Date(now);
+      end.setHours(workEnd[0], workEnd[1], 0, 0);
+      const countdownTime = document.getElementById("countdownTime");
+      if (isRestDay(now)) {
+        countdownTime.innerHTML = `<span class="rest-day">今天休息 😎</span>`;
+        return;
+      }
+      if (now >= end) {
+        countdownTime.textContent = "已经下班啦！🎉";
+        return;
+      }
+      const diff = end - now;
+      const hours = Math.floor(diff / 3600000);
+      const minutes = Math.floor((diff % 3600000) / 60000);
+      const seconds = Math.floor((diff % 60000) / 1000);
+      countdownTime.textContent = `${hours}小时 ${minutes}分 ${seconds}秒`;
+    }
+
+    function updateClock() {
+      const now = new Date();
+      const hour = now.getHours() % 12;
+      const minute = now.getMinutes();
+      const second = now.getSeconds();
+      const millisecond = now.getMilliseconds();
+      document.querySelector(".hand.hour").style.transform = `rotate(${hour * 30 + minute * 0.5}deg)`;
+      document.querySelector(".hand.minute").style.transform = `rotate(${minute * 6 + second * 0.1}deg)`;
+      document.querySelector(".hand.second").style.transform = `rotate(${second * 6 + millisecond * 0.006}deg)`;
+      document.getElementById("digitalClock").textContent =
+        `${String(now.getHours()).padStart(2, '0')}:${String(minute).padStart(2, '0')}:${String(second).padStart(2, '0')}`;
+      updateCountdown(now);
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    }
+
+    function animate() {
+      updateClock();
+      requestAnimationFrame(animate);
+    }
+
+    function renderCalendar(year, month) {
+      const grid = document.getElementById("calendarGrid");
+      const label = document.getElementById("calendarMonthYear");
+      grid.innerHTML = "";
+      const days = ["日", "一", "二", "三", "四", "五", "六"];
+      days.forEach(d => {
+        const el = document.createElement("div");
+        el.style.fontWeight = "bold";
+        el.textContent = d;
+        grid.appendChild(el);
+      });
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const today = new Date();
+      for (let i = 0; i < firstDay; i++) grid.appendChild(document.createElement("div"));
+      for (let d = 1; d <= daysInMonth; d++) {
+        const date = new Date(year, month, d);
+        const div = document.createElement("div");
+        div.textContent = d;
+        if (date.toDateString() === today.toDateString()) div.classList.add("today");
+        if (isRestDay(date)) div.classList.add("rest");
+        grid.appendChild(div);
+      }
+      label.textContent = `${year}年${month + 1}月`;
+    }
+
+    let currentMonth = new Date().getMonth();
+    let currentYear = new Date().getFullYear();
+    function changeMonth(offset) {
+      currentMonth += offset;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      } else if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      renderCalendar(currentYear, currentMonth);
+    }
+
+    initTheme();
+    renderNav();
+    renderCalendar(currentYear, currentMonth);
+    animate();
+  </script>
 </body>
 </html>
