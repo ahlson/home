@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahlson-Work</title>
+  <link rel="icon" href="favicon/work.ico" />
+  <link rel="stylesheet" href="css/work.css" />
+</head>
+<body>
+  <div class="theme-toggle-card" onclick="toggleTheme()">🌓</div>
+
+  <div class="search-container">
+    <form class="search-form" onsubmit="handleSearch(event)">
+      <select id="engine">
+        <option value="https://www.bing.com/search?q=" selected>Bing</option>
+        <option value="https://www.google.com/search?q=">Google</option>
+        <option value="https://www.baidu.com/s?wd=">Baidu</option>
+      </select>
+      <input id="searchInput" type="text" placeholder="Search..." autofocus />
+    </form>
+  </div>
+
+  <div class="clock-card">
+    <div class="clock">
+      <div class="hand hour"></div>
+      <div class="hand minute"></div>
+      <div class="hand second"></div>
+      <div class="center-dot"></div>
+    </div>
+    <div class="digital-clock" id="digitalClock"></div>
+  </div>
+
+  <div class="calendar-card">
+    <div class="calendar-nav">
+      <button onclick="changeMonth(-1)">‹</button>
+      <span id="calendarMonthYear"></span>
+      <button onclick="changeMonth(1)">›</button>
+    </div>
+    <div class="calendar" id="calendarGrid"></div>
+  </div>
+
+  <div class="countdown-card">
+    <div class="countdown-title" id="countdownTitle">自由还有</div>
+    <div class="countdown-time" id="countdownTime"></div>
+  </div>
+
+  <div class="nav-container" id="navContainer"></div>
+
+<script src="js/work.js"></script>
+</body>
+</html>
