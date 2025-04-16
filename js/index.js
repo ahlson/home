@@ -41,7 +41,7 @@ const defaultCards = [
   { name: "Dueros", href: "https://dueros.baidu.com/business/emp/view/project/list", icon: "favicon/dueros.ico" },
   { name: "Docker", href: "https://www.docker.com/", icon: "favicon/docker.svg" },
   
-  { name: "Time", href: "./time.html", icon: "favicon/time.png" }
+  { name: "Work", href: "./work.html", icon: "favicon/time.png" }
   // { name: "", href: "", icon: "favicon/" },
 ];
 
