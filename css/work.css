@@ -225,3 +225,10 @@ height: 38px;
   font-weight: 500;
   color: var(--text-color);
 }
+
+.holiday {
+  background-color: #ffeb3b;
+  color: #d32f2f;
+  font-weight: bold;
+  border-radius: 50%;
+}
