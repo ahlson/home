@@ -41,7 +41,7 @@ function handleSearch(event) {
 }
 
 const workStart = [8, 0];
-const workEnd = [17, 30];
+const workEnd = [18, 00];
 const startWeekDate = new Date("2024-12-27");
 function isRestDay(date) {
   const day = date.getDay();
