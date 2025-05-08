@@ -16,6 +16,22 @@
 </div>
   <div id="dashboard">
     <h2 style="margin-top: 30px;">🧭 Ahlson's Navigation Page</h2>
+    <div class="search-container">
+        <div class="search-bar">
+            <select id="engine-select" class="engine-select">
+              <option value="bing">Bing</option>
+              <option value="google">Google</option>
+              <option value="baidu">Baidu</option>
+            </select>
+            <input 
+              type="text" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="search..."
+              autocomplete="off"
+            >
+          </div>
+    </div>
     <div class="cards" id="cards"></div>
   </div>
 <button id="themeToggle" style="
@@ -32,5 +48,6 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 ">🌓</button> 
 <script src="js/index.js"></script>
+<script src="js/search.js"></script>
 </body>
 </html>
