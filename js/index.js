@@ -4,6 +4,7 @@ const defaultCards = [
   { name: "Baota", href: "https://8.130.64.208:5001/ahlson", icon: "favicon/baota.ico" },
   { name: "Qinglong", href: "http://8.130.64.208:5003", icon: "favicon/qinglong.svg" },
   { name: "Home Assistant", href: "http://8.130.64.208:5006", icon: "favicon/HomeAssistant.ico" },
+  { name: "Aliyun", href: "https://ecs.console.aliyun.com/server/", icon: "favicon/aliyun.ico" },
   { name: "Ward", href: "http://8.130.64.208:5007", icon: "favicon/ward.ico" },
 
   // 文件管理 & 下载
@@ -11,10 +12,12 @@ const defaultCards = [
   { name: "Kodbox", href: "http://8.130.64.208:5008", icon: "favicon/kodbox.ico" },
   { name: "AriaNg", href: "http://8.130.64.208:5005", icon: "favicon/ariang.png" },
   { name: "frps dashboard", href: "http://8.130.64.208:7500", icon: "favicon/frp.ico" },
+  { name: "frp client", href: "http://8.130.64.208:5000", icon: "favicon/frp.ico" },
   // 社交 & 娱乐
   { name: "Douyin", href: "https://www.douyin.com/user/MS4wLjABAAAAS6LTta1Q5qiDVIgJbcOmFJP45KrtfZ5JrQ1qB1K1tMWQh642KY4feikZXgbkpSM8?from_tab_name=main", icon: "favicon/douyin.png" },
   { name: "BiliBili", href: "https://space.bilibili.com/396913123", icon: "favicon/bilibili.ico" },
   { name: "Spotify", href: "https://open.spotify.com/user/31keo23jnkoqd5ctrbmrm5nailkq?si=XtQFg9baT7mAn9b_8_zQ8w", icon: "favicon/Spotify.png" },
+  { name: "hifini", href: "https://hifini.com/", icon: "favicon/hifini.png" },
   { name: "YouTube", href: "https://www.youtube.com/", icon: "favicon/YouTube.png" },
 
   // 开发 & 学习
@@ -22,27 +25,16 @@ const defaultCards = [
   { name: "Gitee", href: "https://gitee.com/Ahlson", icon: "favicon/gitee.ico" },
   { name: "CSDN", href: "https://blog.csdn.net/m0_62518864", icon: "favicon/CSDN.ico" },
   { name: "Linux Do", href: "https://linux.do/", icon: "favicon/linuxdo.png" },
-  
-  //   其它
-  { name: "Apple", href: "https://www.apple.com/", icon: "favicon/apple.ico" },
-  { name: "iCloud", href: "https://www.icloud.com/", icon: "favicon/iCould.png" },
-  { name: "Aliyun", href: "https://ecs.console.aliyun.com/server/", icon: "favicon/aliyun.ico" },
-  { name: "Translate", href: "https://fanyi.baidu.com/", icon: "favicon/translate.ico" },
-
-  //工具
-  { name: "ChatGPT", href: "https://chatgpt.com/", icon: "favicon/ChatGPT.ico" },
-  { name: "DeepSeek", href: "https://chat.deepseek.com/", icon: "favicon/deepseek.svg" },
-  { name: "frp client", href: "http://8.130.64.208:5000", icon: "favicon/frp.ico" },
-  { name: "hifini", href: "https://hifini.com/", icon: "favicon/hifini.png" },
-
-   //time
-  { name: "LZWL", href: "#", icon: "favicon/work.ico" },
-  { name: "ALive", href: "https://www.szalive.com/aliveplatform/index.html#/login", icon: "favicon/szalive.ico" },
-  { name: "Dueros", href: "https://dueros.baidu.com/business/emp/view/project/list", icon: "favicon/dueros.ico" },
   { name: "Docker", href: "https://www.docker.com/", icon: "favicon/docker.svg" },
   
-  { name: "Work", href: "./work.html", icon: "favicon/time.png" }
-  // { name: "", href: "", icon: "favicon/" },
+  // 其它
+  { name: "Apple", href: "https://www.apple.com/", icon: "favicon/apple.ico" },
+  { name: "iCloud", href: "https://www.icloud.com/", icon: "favicon/iCould.png" },
+  { name: "Translate", href: "https://fanyi.baidu.com/", icon: "favicon/translate.ico" },
+  { name: "ChatGPT", href: "https://chatgpt.com/", icon: "favicon/ChatGPT.ico" },
+  { name: "DeepSeek", href: "https://chat.deepseek.com/", icon: "favicon/deepseek.svg" },
+  
+  { name: "Work", href: "./work.html", icon: "favicon/time.png" },
 ];
 
 
