@@ -16,3 +16,7 @@ document.getElementById('search-input').addEventListener('keypress', (e) => {
     }
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('search-input').focus();
+});

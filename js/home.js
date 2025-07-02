@@ -1,11 +1,18 @@
 // index.js
 const defaultCards = [
   // ✅ 系统 & 服务
-  { name: "Qinglong", href: "http://8.130.64.208:5003", icon: "favicon/qinglong.svg" },
-  { name: "Home Assistant", href: "http://8.130.64.208:5006", icon: "favicon/HomeAssistant.ico" },
+  { name: "Baota", href: "https://192.168.4.17:14312/ahlson", icon: "favicon/baota.ico" },
+  { name: "Qinglong", href: "http://192.168.4.17:15700", icon: "favicon/qinglong.svg" },
+  { name: "Home Assistant", href: "http://192.168.4.74:8123", icon: "favicon/HomeAssistant.ico" },
   { name: "Aliyun", href: "https://ecs.console.aliyun.com/server/", icon: "favicon/aliyun.ico" },
+  { name: "Ward", href: "http://192.168.4.17:4000", icon: "favicon/ward.png" },
+  { name: "frps dashboard", href: "http://8.130.64.208:7500", icon: "favicon/frp.ico" },
+  { name: "frp client", href: "http://8.130.64.208:5000", icon: "favicon/frp.ico" },
 
   // ✅ 文件管理 & 下载
+  { name: "Alist", href: "http://192.168.4.17:15244", icon: "favicon/alisst.svg" },
+  { name: "Kodbox", href: "http://192.168.4.17:8080", icon: "favicon/kodbox.ico" },
+  { name: "AriaNg", href: "http://192.168.4.17:6880", icon: "favicon/ariang.png" },
   { name: "Aliyun Drive", href: "https://www.aliyundrive.com/drive", icon: "favicon/aliyundrive.ico" },
   { name: "Baidu Netdisk", href: "https://pan.baidu.com/", icon: "favicon/baiduyun.ico" },
   { name: "Quark Drive", href: "https://pan.quark.cn/", icon: "favicon/quark.icon" },
@@ -19,7 +26,7 @@ const defaultCards = [
   { name: "YouTube", href: "https://www.youtube.com/", icon: "favicon/YouTube.png" },
   { name: "Tencent Video", href: "https://v.qq.com/", icon: "favicon/tencentvideo.ico" },
   { name: "iQIYI", href: "https://www.iqiyi.com/", icon: "favicon/iqiyi.ico" },
-
+  
   // ✅ 开发 & 学习
   { name: "GItHub", href: "https://github.com/ahlson", icon: "favicon/GitHub.png" },
   { name: "Gitee", href: "https://gitee.com/Ahlson", icon: "favicon/gitee.ico" },
@@ -29,14 +36,14 @@ const defaultCards = [
   { name: "ChatGPT", href: "https://chatgpt.com/", icon: "favicon/ChatGPT.ico" },
   { name: "DeepSeek", href: "https://chat.deepseek.com/", icon: "favicon/deepseek.svg" },
   { name: "DouBao", href: "https://www.doubao.com/chat/", icon: "https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/web/logo-icon.png" },
-
+  
   // ✅ 学习
   { name: "Mooc", href: "https://www.icourse163.org/", icon: "favicon/mooc.png" },
+  
   // ✅ 其它工具 & 站点
   { name: "Apple", href: "https://www.apple.com/", icon: "favicon/apple.ico" },
   { name: "hifini", href: "https://hifini.com/", icon: "favicon/hifini.png" },
   { name: "Translate", href: "https://fanyi.baidu.com/", icon: "favicon/translate.ico" },
-//   { name: "Home", href: "./home.html", icon: "favicon/home.png" },
   { name: "Work", href: "./work.html", icon: "favicon/time.png" },
 ];
 // 渲染卡片
