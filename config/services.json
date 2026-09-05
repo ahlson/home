@@ -1,0 +1,521 @@
+{
+  "site": {
+    "title": "Ahlson",
+    "subtitle": "一个地方访问所有自建服务",
+    "description": "在这里集中访问所有自建服务和常用网站，支持内网 / 外网一键切换。"
+  },
+  "favorites": [
+    "百度翻译",
+    "Cloudflare",
+    "ChatGPT",
+    "Gemini",
+    "豆包",
+    "GitHub",
+    "CSDN",
+    "Docker Hub",
+    "Dashboard Icons",
+    "IT-Tools",
+    "抖音",
+    "Bilibili"
+  ],
+  "categories": [
+    {
+      "name": "核心服务",
+      "icon": "star",
+      "items": [
+        {
+          "name": "Portainer",
+          "description": "Docker 管理界面",
+          "icon": "portainer.svg",
+          "internalUrl": "http://192.168.2.88:9000",
+          "externalUrl": "https://portainer.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "Home Assistant",
+          "description": "智能家居系统",
+          "icon": "home-assistant.svg",
+          "internalUrl": "http://192.168.2.132:8123",
+          "externalUrl": "https://ha.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "Uptime Kuma",
+          "description": "服务监控",
+          "icon": "uptime-kuma.svg",
+          "internalUrl": "http://192.168.2.88:3021",
+          "externalUrl": "https://uptime.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "思源笔记",
+          "description": "本地优先的笔记软件",
+          "icon": "siyuan.svg",
+          "internalUrl": "http://192.168.2.88:6806",
+          "externalUrl": "https://siyuan.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "青龙面板",
+          "description": "自动化任务面板",
+          "icon": "qinglong.svg",
+          "internalUrl": "http://192.168.2.88:5700",
+          "externalUrl": "https://qinglong.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "Excalidraw",
+          "description": "手绘风格白板",
+          "icon": "excalidraw.svg",
+          "internalUrl": "http://192.168.2.88:32221",
+          "externalUrl": "https://excalidraw.ahlson.uk",
+          "type": "server"
+        }
+      ]
+    },
+    {
+      "name": "工具",
+      "icon": "database",
+      "items": [
+        {
+          "name": "Alist",
+          "description": "文件管理与下载",
+          "icon": "alist.svg",
+          "internalUrl": "http://192.168.2.88:5244",
+          "externalUrl": "https://alist.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "Adminer",
+          "description": "MySQL 数据库管理",
+          "icon": "adminer.svg",
+          "internalUrl": "http://192.168.2.88:8058",
+          "externalUrl": "https://adminer.ahlson.uk/",
+          "type": "server"
+        },
+        {
+          "name": "PrivateBin",
+          "description": "临时文本分享",
+          "icon": "pastey.png",
+          "internalUrl": "http://192.168.2.88:3003",
+          "externalUrl": "https://paste.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "Code Server",
+          "description": "在线代码编辑器",
+          "icon": "vscode.svg",
+          "internalUrl": "http://192.168.2.88:32223",
+          "externalUrl": "https://code.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "刷题系统",
+          "description": "在线刷题练习",
+          "icon": "openbooks.svg",
+          "internalUrl": "http://192.168.2.88:301",
+          "externalUrl": "https://st.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "训练",
+          "description": "计划日常锻炼",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/opengym.png",
+          "internalUrl": "http://192.168.2.88:8686",
+          "externalUrl": "https://xl.ahlson.uk",
+          "type": "server"
+        }
+      ]
+    },
+    {
+      "name": "实用与娱乐",
+      "icon": "sparkles",
+      "items": [
+        {
+          "name": "音乐",
+          "description": "在线音乐服务",
+          "icon": "apple-music.svg",
+          "internalUrl": "http://192.168.2.88:61226",
+          "externalUrl": "https://music.ahlson.uk/music",
+          "type": "server"
+        },
+        {
+          "name": "核算助手",
+          "description": "核算工资和数据对照",
+          "icon": "apache.svg",
+          "internalUrl": "http://192.168.2.88:9981",
+          "externalUrl": "https://zxh.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "推箱子",
+          "description": "经典推箱子小游戏",
+          "icon": "https://index-tts2.org/favicon.ico",
+          "internalUrl": "http://192.168.2.88:7180",
+          "externalUrl": "https://sokoban.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "n8n",
+          "description": "工作流自动化",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/n8n.png",
+          "internalUrl": "http://192.168.2.88:5678",
+          "externalUrl": "https://n8n.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "SurveyKing",
+          "description": "问卷考试系统",
+          "icon": "https://surveyking.cn/favicon.ico",
+          "internalUrl": "http://192.168.2.88:1991",
+          "externalUrl": "https://surveyking.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "道理鱼音乐",
+          "description": "道理鱼音乐站",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/youtube-music.png",
+          "internalUrl": "http://192.168.2.88:4000",
+          "externalUrl": "https://daoliyu.ahlson.uk",
+          "type": "server"
+        }
+      ]
+    },
+    {
+      "name": "AI 助手",
+      "icon": "bot",
+      "items": [
+        {
+          "name": "ChatGPT",
+          "description": "ChatGPT",
+          "icon": "openai-light.svg",
+          "internalUrl": "",
+          "externalUrl": "https://chatgpt.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Gemini",
+          "description": "Google Gemini",
+          "icon": "google-gemini.svg",
+          "internalUrl": "",
+          "externalUrl": "https://gemini.google.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Grok",
+          "description": "Grok AI",
+          "icon": "grok.svg",
+          "internalUrl": "",
+          "externalUrl": "https://grok.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Claude",
+          "description": "克劳德",
+          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/claude.svg",
+          "internalUrl": "",
+          "externalUrl": "https://claude.ai/",
+          "type": "bookmark"
+        },
+        {
+          "name": "WorkBuddy",
+          "description": "智能助手",
+          "icon": "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/web/workbuddy/0fadefe472cfb64411edc82a21f5625ea892e899/assets/logo.svg",
+          "internalUrl": "",
+          "externalUrl": "https://www.workbuddy.ai/app",
+          "type": "bookmark"
+        },
+        {
+          "name": "Sora",
+          "description": "OpenAI Sora",
+          "icon": "https://cdn.openai.com/nf2/nf2-lp/misc/dark-mode-icon.png?w=3840&q=100&fm=webp",
+          "internalUrl": "",
+          "externalUrl": "https://sora.chatgpt.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "飞书",
+          "description": "飞书 AI",
+          "icon": "https://www.feishu.cn/favicon.ico",
+          "internalUrl": "",
+          "externalUrl": "https://www.feishu.cn/",
+          "type": "bookmark"
+        },
+        {
+          "name": "豆包",
+          "description": "豆包 AI",
+          "icon": "https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/samantha/logo-icon-white-bg.png",
+          "internalUrl": "",
+          "externalUrl": "https://www.doubao.com/chat/",
+          "type": "bookmark"
+        },
+        {
+          "name": "DeepSeek",
+          "description": "DeepSeek",
+          "icon": "deepseek.svg",
+          "internalUrl": "",
+          "externalUrl": "https://chat.deepseek.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "通义千问",
+          "description": "通义千问",
+          "icon": "https://img.alicdn.com/imgextra/i2/O1CN01FPcQDy1WTPjPX6IH9_!!6000000002789-2-tps-96-96.png",
+          "internalUrl": "",
+          "externalUrl": "https://www.qianwen.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Coze",
+          "description": "扣子 AI",
+          "icon": "https://sf-coze-web-cdn.coze.com/obj/coze-web-sg/obric/coze/favicon.1970.png",
+          "internalUrl": "",
+          "externalUrl": "https://www.coze.com/",
+          "type": "bookmark"
+        }
+      ]
+    },
+    {
+      "name": "云盘",
+      "icon": "cloud",
+      "items": [
+        {
+          "name": "Apple",
+          "description": "Apple 官网",
+          "icon": "apple.svg",
+          "internalUrl": "",
+          "externalUrl": "https://www.apple.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "阿里云",
+          "description": "阿里云控制台",
+          "icon": "aliyun.svg",
+          "internalUrl": "",
+          "externalUrl": "https://home.console.aliyun.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "阿里云盘",
+          "description": "阿里云盘",
+          "icon": "https://img.alicdn.com/imgextra/i1/O1CN01JDQCi21Dc8EfbRwvF_!!6000000000236-73-tps-64-64.ico",
+          "internalUrl": "",
+          "externalUrl": "https://www.aliyundrive.com/drive",
+          "type": "bookmark"
+        },
+        {
+          "name": "百度网盘",
+          "description": "百度网盘",
+          "icon": "https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico",
+          "internalUrl": "",
+          "externalUrl": "https://pan.baidu.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "夸克网盘",
+          "description": "夸克网盘",
+          "icon": "https://pan.quark.cn/favicon.ico",
+          "internalUrl": "",
+          "externalUrl": "https://pan.quark.cn/",
+          "type": "bookmark"
+        },
+        {
+          "name": "iCloud",
+          "description": "Apple 云",
+          "icon": "icloud.svg",
+          "internalUrl": "",
+          "externalUrl": "https://www.icloud.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Google Drive",
+          "description": "Google 云端硬盘",
+          "icon": "google-drive.svg",
+          "internalUrl": "",
+          "externalUrl": "https://drive.google.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "OneDrive",
+          "description": "微软云",
+          "icon": "microsoft-onedrive.svg",
+          "internalUrl": "",
+          "externalUrl": "https://onedrive.live.com/",
+          "type": "bookmark"
+        }
+      ]
+    },
+    {
+      "name": "影音娱乐",
+      "icon": "play",
+      "items": [
+        {
+          "name": "SeedHub",
+          "description": "影库",
+          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/yt-dlp-web-player.png",
+          "internalUrl": "",
+          "externalUrl": "https://www.seedhub.cc/",
+          "type": "bookmark"
+        },
+        {
+          "name": "书库",
+          "description": "在线书库",
+          "icon": "calibre.svg",
+          "internalUrl": "",
+          "externalUrl": "https://zh.merry101.ru",
+          "type": "bookmark"
+        },
+        {
+          "name": "网易云",
+          "description": "网易云音乐",
+          "icon": "https://music.163.com/favicon.ico",
+          "internalUrl": "",
+          "externalUrl": "https://music.163.com/#/playlist?id=2249483798",
+          "type": "bookmark"
+        },
+        {
+          "name": "HiFiNi",
+          "description": "HiFi 音乐论坛",
+          "icon": "https://hifini.net/view/img/logo.png",
+          "internalUrl": "",
+          "externalUrl": "https://hifini.net",
+          "type": "bookmark"
+        },
+        {
+          "name": "抖音",
+          "description": "抖音",
+          "icon": "tiktok.svg",
+          "internalUrl": "",
+          "externalUrl": "https://www.douyin.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Bilibili",
+          "description": "B 站",
+          "icon": "bilibili.svg",
+          "internalUrl": "",
+          "externalUrl": "https://space.bilibili.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "YouTube",
+          "description": "YouTube",
+          "icon": "youtube.svg",
+          "internalUrl": "",
+          "externalUrl": "https://www.youtube.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "腾讯视频",
+          "description": "腾讯视频",
+          "icon": "https://v.qq.com/favicon.ico",
+          "internalUrl": "",
+          "externalUrl": "https://v.qq.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "爱奇艺",
+          "description": "爱奇艺",
+          "icon": "https://www.iqiyi.com/favicon.ico",
+          "internalUrl": "",
+          "externalUrl": "https://www.iqiyi.com/",
+          "type": "bookmark"
+        }
+      ]
+    },
+    {
+      "name": "开发资源",
+      "icon": "terminal",
+      "items": [
+        {
+          "name": "Cloudflare",
+          "description": "Cloudflare 控制台",
+          "icon": "cloudflare.svg",
+          "internalUrl": "",
+          "externalUrl": "https://dash.cloudflare.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Dashboard Icons",
+          "description": "图标库",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/dashboard-icons.png",
+          "internalUrl": "",
+          "externalUrl": "https://dashboardicons.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "GitHub",
+          "description": "GitHub",
+          "icon": "github-light.svg",
+          "internalUrl": "",
+          "externalUrl": "https://github.com/ahlson",
+          "type": "bookmark"
+        },
+        {
+          "name": "Gitee",
+          "description": "Gitee",
+          "icon": "gitee.svg",
+          "internalUrl": "",
+          "externalUrl": "https://gitee.com/Ahlson",
+          "type": "bookmark"
+        },
+        {
+          "name": "CSDN",
+          "description": "CSDN 博客",
+          "icon": "https://g.csdnimg.cn/static/logo/favicon32.ico",
+          "internalUrl": "",
+          "externalUrl": "https://blog.csdn.net/m0_62518864",
+          "type": "bookmark"
+        },
+        {
+          "name": "Linux Do",
+          "description": "Linux Do 社区",
+          "icon": "linuxdo.svg",
+          "internalUrl": "",
+          "externalUrl": "https://linux.do/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Docker Hub",
+          "description": "Docker Hub",
+          "icon": "docker.svg",
+          "internalUrl": "",
+          "externalUrl": "https://hub.docker.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Stack Overflow",
+          "description": "全球技术问答社区",
+          "icon": "bookstack.svg",
+          "internalUrl": "",
+          "externalUrl": "https://stackoverflow.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Arch Wiki",
+          "description": "Linux 定制知识库",
+          "icon": "arch-linux.svg",
+          "internalUrl": "",
+          "externalUrl": "https://wiki.archlinux.org/",
+          "type": "bookmark"
+        },
+        {
+          "name": "IT-Tools",
+          "description": "开发者工具箱",
+          "icon": "it-tools.svg",
+          "internalUrl": "",
+          "externalUrl": "https://it-tools.tech/",
+          "type": "bookmark"
+        },
+        {
+          "name": "百度翻译",
+          "description": "在线翻译",
+          "icon": "google-translate.svg",
+          "internalUrl": "",
+          "externalUrl": "https://fanyi.baidu.com",
+          "type": "bookmark"
+        }
+      ]
+    }
+  ]
+}

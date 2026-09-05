@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Ahlson — 一个地方访问所有自建服务，支持内网 / 外网一键切换">
+    <meta name="theme-color" content="#0f172a">
+    <title>Ahlson</title>
+    <link rel="icon" type="image/svg+xml" href="icons/n8n.svg">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- 背景图（来自 settings.yaml 配置的 /images/bizhi.jpeg）-->
+    <div class="bg-layer" aria-hidden="true"></div>
+
+    <!-- 顶部栏 (sticky, 始终悬浮在顶部) -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <!-- 单行: 标题 (左) + 搜索框 (中) + 模式切换 + 主题 + 时钟 (右) -->
+            <div class="hero-meta">
+                <h1 class="hero-title" id="siteTitle">Ahlson</h1>
+            </div>
+
+            <div class="search-wrap">
+                    <button class="engine-btn" id="engineBtn" type="button" aria-haspopup="menu" aria-expanded="false" title="切换搜索引擎">Bing</button>
+                    <div class="engine-menu" id="engineMenu" role="menu" hidden>
+                        <button class="engine-option" type="button" role="menuitem" data-engine="bing">Bing</button>
+                        <button class="engine-option" type="button" role="menuitem" data-engine="google">Google</button>
+                        <button class="engine-option" type="button" role="menuitem" data-engine="baidu">百度</button>
+                    </div>
+                    <span class="search-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </span>
+                    <input
+                        id="searchInput"
+                        class="search-input"
+                        type="search"
+                        placeholder="使用 Bing 搜索网页…"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+                    <kbd class="search-kbd" id="searchKbd">/</kbd>
+                </div>
+
+                <div class="seg" role="tablist" aria-label="网络模式">
+                    <button class="seg-btn" data-mode="auto" role="tab" title="自动" aria-label="自动">
+                        <span class="seg-icon">⚡</span>
+                    </button>
+                    <button class="seg-btn" data-mode="internal" role="tab" title="内网" aria-label="内网">
+                        <span class="seg-icon">🏠</span>
+                    </button>
+                    <button class="seg-btn" data-mode="external" role="tab" title="外网" aria-label="外网">
+                        <span class="seg-icon">☁</span>
+                    </button>
+                </div>
+
+                <button class="icon-btn" id="editToggle" aria-label="编辑模式" title="编辑模式">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </button>
+
+                <button class="icon-btn edit-only" id="exportBtn" aria-label="导出 services.json" title="导出 services.json">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </button>
+
+                <button class="icon-btn edit-only" id="resetBtn" aria-label="重置为文件配置" title="重置为文件配置 (丢弃网页端修改)">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                </button>
+
+                <button class="icon-btn" id="themeToggle" aria-label="切换主题" title="切换主题">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+
+                <div class="hero-clock">
+                    <span class="clock-time" id="clockTime">--:--</span>
+                    <span class="clock-date" id="clockDate">--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="shell">
+        <!-- 服务区 -->
+        <section id="content" class="content">
+            <!-- 收藏区 (纯图标, 无标题) -->
+            <section class="category is-fav-section" data-category="favorites" id="favSection" hidden>
+                <div class="grid" id="favGrid"></div>
+            </section>
+
+            <!-- 动态注入的分类 -->
+            <div id="categoriesContainer"></div>
+
+            <!-- 新增分类 (仅编辑模式可见) -->
+            <button class="add-category" id="addCategoryBtn" type="button">＋ 新增分类</button>
+
+            <!-- 空状态 -->
+            <div class="empty" id="emptyState" hidden>
+                <div class="empty-emoji">⚠️</div>
+                <div class="empty-title">没有可用的服务</div>
+                <div class="empty-desc">请检查 config/services.json 配置</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 右下角: 回到顶部 (下滑后出现) -->
+    <button class="backtop" id="backTop" type="button" aria-label="回到顶部" title="回到顶部">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- 编辑弹窗 (增/改 服务与分类) -->
+    <div class="modal-overlay" id="editModal" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <h3 class="modal-title" id="modalTitle">编辑服务</h3>
+            <form id="editForm" novalidate>
+                <div class="field">
+                    <label for="fName" id="fNameLabel">名称</label>
+                    <input id="fName" type="text" autocomplete="off" spellcheck="false">
+                </div>
+                <div class="field item-only">
+                    <label for="fDesc">描述</label>
+                    <input id="fDesc" type="text" autocomplete="off" spellcheck="false">
+                </div>
+                <div class="field">
+                    <label for="fIcon">图标</label>
+                    <input id="fIcon" type="text" autocomplete="off" spellcheck="false" placeholder="icons/ 下的文件名，或 https:// 完整链接">
+                    <img id="fIconPreview" class="icon-preview" alt="" hidden>
+                </div>
+                <div class="field-row item-only">
+                    <div class="field">
+                        <label for="fType">类型</label>
+                        <select id="fType">
+                            <option value="server">服务 (有内网地址)</option>
+                            <option value="bookmark">书签 (仅外网)</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="fCategory">分类</label>
+                        <select id="fCategory"></select>
+                    </div>
+                </div>
+                <div class="field item-only" id="fInternalField">
+                    <label for="fInternal">内网地址</label>
+                    <input id="fInternal" type="text" autocomplete="off" spellcheck="false" placeholder="http://192.168.2.88:端口">
+                </div>
+                <div class="field item-only">
+                    <label for="fExternal">外网地址</label>
+                    <input id="fExternal" type="text" autocomplete="off" spellcheck="false" placeholder="https://example.com">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-cancel" id="modalCancel">取消</button>
+                    <button type="submit" class="btn btn-save" id="modalSave">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 卡片模板 -->
+    <template id="cardTemplate">
+        <a class="card" data-id="" href="#" rel="noopener noreferrer" target="_blank">
+            <button class="card-star" type="button" aria-label="收藏" title="收藏">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <div class="card-icon">
+                <img alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="card-content">
+                <div class="card-name"></div>
+                <div class="card-desc"></div>
+                <div class="card-host"></div>
+            </div>
+        </a>
+    </template>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
