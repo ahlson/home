@@ -148,14 +148,6 @@
           "type": "server"
         },
         {
-          "name": "推箱子",
-          "description": "经典推箱子小游戏",
-          "icon": "https://index-tts2.org/favicon.ico",
-          "internalUrl": "",
-          "externalUrl": "https://ecyrbe.github.io/sokoban/",
-          "type": "server"
-        },
-        {
           "name": "n8n",
           "description": "工作流自动化",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/n8n.png",
@@ -420,6 +412,14 @@
           "internalUrl": "",
           "externalUrl": "https://www.iqiyi.com/",
           "type": "bookmark"
+        },
+        {
+          "name": "推箱子",
+          "description": "经典推箱子小游戏",
+          "icon": "https://index-tts2.org/favicon.ico",
+          "internalUrl": "",
+          "externalUrl": "https://ecyrbe.github.io/sokoban/",
+          "type": "server"
         }
       ]
     },
