@@ -242,7 +242,7 @@ img {
     color: var(--text-muted);
 }
 
-/* 窄屏: 隐藏标题和时钟, 搜索框独占整行 */
+/* 窄屏: 隐藏标题和时钟 */
 @media (max-width: 860px) {
     .hero-meta,
     .hero-clock {
@@ -257,6 +257,18 @@ img {
     min-width: 0;
     display: flex;
     align-items: center;
+}
+
+/* 更窄: 搜索框换行独占整行, 模式切换等控件居中排在第二行 */
+@media (max-width: 720px) {
+    .topbar-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-wrap {
+        flex: 1 1 100%;
+    }
 }
 
 .search-icon {

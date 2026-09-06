@@ -579,20 +579,21 @@
         // 初始化所有卡片状态
         refreshAllCardsState();
 
-        // 首次访问: 用 JSON 里的 favorites 预设初始化收藏 (用户在浏览器改过则跳过)
-        if (!state.favsCustomized) seedFavoritesFromConfig();
-
         // 渲染收藏区 (如果已有收藏)
+        // 注意: 收藏预设已在 boot 阶段通过 seedFavoritesFromConfig 提前注入,
+        // 保证主网格卡片的星标在首次渲染时就点亮
         renderFavorites();
     }
 
     // 从 services.json 的 "favorites" 数组初始化收藏 (按名字匹配, 顺序即数组顺序)
+    // 直接扫描 config 而不依赖 flatIndex, 因此可以在 render 之前调用
     function seedFavoritesFromConfig() {
         const names = state.config && state.config.favorites;
         if (!Array.isArray(names) || names.length === 0) return;
         names.forEach((name) => {
-            const entry = state.flatIndex.find((x) => x.name === name);
-            if (entry) state.favorites.add(entry.id);
+            const cat = state.config.categories.find((c) =>
+                c.items.some((it) => it.name === name));
+            if (cat) state.favorites.add(makeId(cat.name, name));
         });
     }
 
@@ -1287,7 +1288,13 @@
         setupEditMode();
 
         const ok = await loadConfig();
-        if (ok) render();
+        if (ok) {
+            // 首次访问: 用 JSON 里的 favorites 预设初始化收藏 (用户在浏览器改过则跳过)
+            // 必须在 render 之前完成, 否则主网格卡片创建时收藏集还是空的,
+            // 星标要等手动标星 + 刷新后才会显示
+            if (!state.favsCustomized) seedFavoritesFromConfig();
+            render();
+        }
     }
 
     if (document.readyState === 'loading') {
