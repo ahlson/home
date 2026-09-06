@@ -26,7 +26,7 @@
         {
           "name": "Portainer",
           "description": "Docker 管理界面",
-          "icon": "portainer.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/portainer.png",
           "internalUrl": "http://192.168.2.88:9000",
           "externalUrl": "https://portainer.ahlson.uk",
           "type": "server"
@@ -34,7 +34,7 @@
         {
           "name": "Home Assistant",
           "description": "智能家居系统",
-          "icon": "home-assistant.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/home-assistant.png",
           "internalUrl": "http://192.168.2.132:8123",
           "externalUrl": "https://ha.ahlson.uk",
           "type": "server"
@@ -42,7 +42,7 @@
         {
           "name": "Uptime Kuma",
           "description": "服务监控",
-          "icon": "uptime-kuma.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp",
           "internalUrl": "http://192.168.2.88:3021",
           "externalUrl": "https://uptime.ahlson.uk",
           "type": "server"
@@ -50,7 +50,7 @@
         {
           "name": "思源笔记",
           "description": "本地优先的笔记软件",
-          "icon": "siyuan.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/siyuan.svg",
           "internalUrl": "http://192.168.2.88:6806",
           "externalUrl": "https://siyuan.ahlson.uk",
           "type": "server"
@@ -58,7 +58,7 @@
         {
           "name": "青龙面板",
           "description": "自动化任务面板",
-          "icon": "qinglong.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/qinglong.png",
           "internalUrl": "http://192.168.2.88:5700",
           "externalUrl": "https://qinglong.ahlson.uk",
           "type": "server"
@@ -66,7 +66,7 @@
         {
           "name": "Excalidraw",
           "description": "手绘风格白板",
-          "icon": "excalidraw.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/excalidraw.png",
           "internalUrl": "http://192.168.2.88:32221",
           "externalUrl": "https://excalidraw.ahlson.uk",
           "type": "server"
@@ -80,7 +80,7 @@
         {
           "name": "Alist",
           "description": "文件管理与下载",
-          "icon": "alist.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/alist.svg",
           "internalUrl": "http://192.168.2.88:5244",
           "externalUrl": "https://alist.ahlson.uk",
           "type": "server"
@@ -88,7 +88,7 @@
         {
           "name": "Adminer",
           "description": "MySQL 数据库管理",
-          "icon": "adminer.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/adminer.png",
           "internalUrl": "http://192.168.2.88:8058",
           "externalUrl": "https://adminer.ahlson.uk/",
           "type": "server"
@@ -96,7 +96,7 @@
         {
           "name": "PrivateBin",
           "description": "临时文本分享",
-          "icon": "pastey.png",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/pastey.webp",
           "internalUrl": "http://192.168.2.88:3003",
           "externalUrl": "https://paste.ahlson.uk",
           "type": "server"
@@ -104,7 +104,7 @@
         {
           "name": "Code Server",
           "description": "在线代码编辑器",
-          "icon": "vscode.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/vscode.png",
           "internalUrl": "http://192.168.2.88:32223",
           "externalUrl": "https://code.ahlson.uk",
           "type": "server"
@@ -112,7 +112,7 @@
         {
           "name": "刷题系统",
           "description": "在线刷题练习",
-          "icon": "openbooks.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/openbooks.png",
           "internalUrl": "http://192.168.2.88:301",
           "externalUrl": "https://st.ahlson.uk",
           "type": "server"
@@ -134,7 +134,7 @@
         {
           "name": "音乐",
           "description": "在线音乐服务",
-          "icon": "apple-music.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
           "internalUrl": "http://192.168.2.88:61226",
           "externalUrl": "https://music.ahlson.uk/music",
           "type": "server"
@@ -142,7 +142,7 @@
         {
           "name": "核算助手",
           "description": "核算工资和数据对照",
-          "icon": "apache.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apache.png",
           "internalUrl": "http://192.168.2.88:9981",
           "externalUrl": "https://zxh.ahlson.uk",
           "type": "server"
@@ -180,7 +180,7 @@
         {
           "name": "ChatGPT",
           "description": "ChatGPT",
-          "icon": "openai-light.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/openai.svg",
           "internalUrl": "",
           "externalUrl": "https://chatgpt.com/",
           "type": "bookmark"
@@ -188,7 +188,7 @@
         {
           "name": "Gemini",
           "description": "Google Gemini",
-          "icon": "google-gemini.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-gemini.png",
           "internalUrl": "",
           "externalUrl": "https://gemini.google.com/",
           "type": "bookmark"
@@ -196,7 +196,7 @@
         {
           "name": "Grok",
           "description": "Grok AI",
-          "icon": "grok.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/grok.png",
           "internalUrl": "",
           "externalUrl": "https://grok.com/",
           "type": "bookmark"
@@ -244,7 +244,7 @@
         {
           "name": "DeepSeek",
           "description": "DeepSeek",
-          "icon": "deepseek.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/deepseek.png",
           "internalUrl": "",
           "externalUrl": "https://chat.deepseek.com/",
           "type": "bookmark"
@@ -274,7 +274,7 @@
         {
           "name": "Apple",
           "description": "Apple 官网",
-          "icon": "apple.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple.png",
           "internalUrl": "",
           "externalUrl": "https://www.apple.com/",
           "type": "bookmark"
@@ -282,7 +282,7 @@
         {
           "name": "阿里云",
           "description": "阿里云控制台",
-          "icon": "aliyun.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/aliyun.png",
           "internalUrl": "",
           "externalUrl": "https://home.console.aliyun.com/",
           "type": "bookmark"
@@ -314,7 +314,7 @@
         {
           "name": "iCloud",
           "description": "Apple 云",
-          "icon": "icloud.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/icloud.png",
           "internalUrl": "",
           "externalUrl": "https://www.icloud.com/",
           "type": "bookmark"
@@ -322,7 +322,7 @@
         {
           "name": "Google Drive",
           "description": "Google 云端硬盘",
-          "icon": "google-drive.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-drive.png",
           "internalUrl": "",
           "externalUrl": "https://drive.google.com/",
           "type": "bookmark"
@@ -330,7 +330,7 @@
         {
           "name": "OneDrive",
           "description": "微软云",
-          "icon": "microsoft-onedrive.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/microsoft-onedrive.png",
           "internalUrl": "",
           "externalUrl": "https://onedrive.live.com/",
           "type": "bookmark"
@@ -352,7 +352,7 @@
         {
           "name": "书库",
           "description": "在线书库",
-          "icon": "calibre.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/calibre.png",
           "internalUrl": "",
           "externalUrl": "https://zh.merry101.ru",
           "type": "bookmark"
@@ -376,7 +376,7 @@
         {
           "name": "抖音",
           "description": "抖音",
-          "icon": "tiktok.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/tiktok.png",
           "internalUrl": "",
           "externalUrl": "https://www.douyin.com/",
           "type": "bookmark"
@@ -384,7 +384,7 @@
         {
           "name": "Bilibili",
           "description": "B 站",
-          "icon": "bilibili.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/bilibili.png",
           "internalUrl": "",
           "externalUrl": "https://space.bilibili.com/",
           "type": "bookmark"
@@ -392,7 +392,7 @@
         {
           "name": "YouTube",
           "description": "YouTube",
-          "icon": "youtube.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/youtube.png",
           "internalUrl": "",
           "externalUrl": "https://www.youtube.com/",
           "type": "bookmark"
@@ -430,7 +430,7 @@
         {
           "name": "Cloudflare",
           "description": "Cloudflare 控制台",
-          "icon": "cloudflare.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/cloudflare.png",
           "internalUrl": "",
           "externalUrl": "https://dash.cloudflare.com/",
           "type": "bookmark"
@@ -446,7 +446,7 @@
         {
           "name": "GitHub",
           "description": "GitHub",
-          "icon": "github-light.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/github-dark.svg",
           "internalUrl": "",
           "externalUrl": "https://github.com/ahlson",
           "type": "bookmark"
@@ -454,7 +454,7 @@
         {
           "name": "Gitee",
           "description": "Gitee",
-          "icon": "gitee.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/gitee.png",
           "internalUrl": "",
           "externalUrl": "https://gitee.com/Ahlson",
           "type": "bookmark"
@@ -470,7 +470,7 @@
         {
           "name": "Linux Do",
           "description": "Linux Do 社区",
-          "icon": "linuxdo.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/linuxdo.png",
           "internalUrl": "",
           "externalUrl": "https://linux.do/",
           "type": "bookmark"
@@ -478,7 +478,7 @@
         {
           "name": "Docker Hub",
           "description": "Docker Hub",
-          "icon": "docker.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/docker.png",
           "internalUrl": "",
           "externalUrl": "https://hub.docker.com/",
           "type": "bookmark"
@@ -486,7 +486,7 @@
         {
           "name": "Stack Overflow",
           "description": "全球技术问答社区",
-          "icon": "bookstack.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/bookstack.png",
           "internalUrl": "",
           "externalUrl": "https://stackoverflow.com/",
           "type": "bookmark"
@@ -494,7 +494,7 @@
         {
           "name": "Arch Wiki",
           "description": "Linux 定制知识库",
-          "icon": "arch-linux.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/arch-linux.png",
           "internalUrl": "",
           "externalUrl": "https://wiki.archlinux.org/",
           "type": "bookmark"
@@ -502,7 +502,7 @@
         {
           "name": "IT-Tools",
           "description": "开发者工具箱",
-          "icon": "it-tools.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/it-tools.svg",
           "internalUrl": "",
           "externalUrl": "https://it-tools.tech/",
           "type": "bookmark"
@@ -510,7 +510,7 @@
         {
           "name": "百度翻译",
           "description": "在线翻译",
-          "icon": "google-translate.svg",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-translate.png",
           "internalUrl": "",
           "externalUrl": "https://fanyi.baidu.com",
           "type": "bookmark"
