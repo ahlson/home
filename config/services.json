@@ -64,11 +64,11 @@
           "type": "server"
         },
         {
-          "name": "Excalidraw",
-          "description": "手绘风格白板",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/excalidraw.png",
-          "internalUrl": "http://192.168.2.88:32221",
-          "externalUrl": "https://excalidraw.ahlson.uk",
+          "name": "音乐",
+          "description": "在线音乐服务",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
+          "internalUrl": "http://192.168.2.88:61226",
+          "externalUrl": "https://music.ahlson.uk/music",
           "type": "server"
         }
       ]
@@ -131,14 +131,6 @@
       "name": "实用与娱乐",
       "icon": "sparkles",
       "items": [
-        {
-          "name": "音乐",
-          "description": "在线音乐服务",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
-          "internalUrl": "http://192.168.2.88:61226",
-          "externalUrl": "https://music.ahlson.uk/music",
-          "type": "server"
-        },
         {
           "name": "核算助手",
           "description": "核算工资和数据对照",
@@ -505,6 +497,14 @@
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/it-tools.svg",
           "internalUrl": "",
           "externalUrl": "https://it-tools.tech/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Excalidraw",
+          "description": "手绘风格白板",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/excalidraw.png",
+          "internalUrl": "http://192.168.2.88:32221",
+          "externalUrl": "https://excalidraw.ahlson.uk",
           "type": "bookmark"
         },
         {
