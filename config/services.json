@@ -16,7 +16,8 @@
     "Dashboard Icons",
     "IT-Tools",
     "抖音",
-    "Bilibili"
+    "Bilibili",
+    "Excalidraw"
   ],
   "categories": [
     {
@@ -503,8 +504,8 @@
           "name": "Excalidraw",
           "description": "手绘风格白板",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/excalidraw.png",
-          "internalUrl": "http://192.168.2.88:32221",
-          "externalUrl": "https://excalidraw.ahlson.uk",
+          "internalUrl": "",
+          "externalUrl": "https://excalidraw.com",
           "type": "bookmark"
         },
         {
