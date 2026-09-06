@@ -8,15 +8,14 @@
     "百度翻译",
     "Cloudflare",
     "ChatGPT",
-    "Gemini",
     "豆包",
     "GitHub",
-    "CSDN",
     "Docker Hub",
     "Dashboard Icons",
     "IT-Tools",
     "抖音",
     "Bilibili",
+    "推箱子",
     "Excalidraw"
   ],
   "categories": [
@@ -25,11 +24,11 @@
       "icon": "star",
       "items": [
         {
-          "name": "Portainer",
-          "description": "Docker 管理界面",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/portainer.png",
-          "internalUrl": "http://192.168.2.88:9000",
-          "externalUrl": "https://portainer.ahlson.uk",
+          "name": "Uptime Kuma",
+          "description": "服务监控",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp",
+          "internalUrl": "http://192.168.2.88:3021",
+          "externalUrl": "https://uptime.ahlson.uk",
           "type": "server"
         },
         {
@@ -38,14 +37,6 @@
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/home-assistant.png",
           "internalUrl": "http://192.168.2.132:8123",
           "externalUrl": "https://ha.ahlson.uk",
-          "type": "server"
-        },
-        {
-          "name": "Uptime Kuma",
-          "description": "服务监控",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp",
-          "internalUrl": "http://192.168.2.88:3021",
-          "externalUrl": "https://uptime.ahlson.uk",
           "type": "server"
         },
         {
@@ -65,6 +56,14 @@
           "type": "server"
         },
         {
+          "name": "Alist",
+          "description": "文件管理与下载",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/alist.svg",
+          "internalUrl": "http://192.168.2.88:5244",
+          "externalUrl": "https://alist.ahlson.uk",
+          "type": "server"
+        },
+        {
           "name": "音乐",
           "description": "在线音乐服务",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
@@ -79,35 +78,11 @@
       "icon": "database",
       "items": [
         {
-          "name": "Alist",
-          "description": "文件管理与下载",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/alist.svg",
-          "internalUrl": "http://192.168.2.88:5244",
-          "externalUrl": "https://alist.ahlson.uk",
-          "type": "server"
-        },
-        {
-          "name": "Adminer",
-          "description": "MySQL 数据库管理",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/adminer.png",
-          "internalUrl": "http://192.168.2.88:8058",
-          "externalUrl": "https://adminer.ahlson.uk/",
-          "type": "server"
-        },
-        {
-          "name": "PrivateBin",
-          "description": "临时文本分享",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/pastey.webp",
-          "internalUrl": "http://192.168.2.88:3003",
-          "externalUrl": "https://paste.ahlson.uk",
-          "type": "server"
-        },
-        {
-          "name": "Code Server",
-          "description": "在线代码编辑器",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/vscode.png",
-          "internalUrl": "http://192.168.2.88:32223",
-          "externalUrl": "https://code.ahlson.uk",
+          "name": "训练",
+          "description": "计划日常锻炼",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/opengym.png",
+          "internalUrl": "http://192.168.2.88:8686",
+          "externalUrl": "https://xl.ahlson.uk",
           "type": "server"
         },
         {
@@ -119,20 +94,6 @@
           "type": "server"
         },
         {
-          "name": "训练",
-          "description": "计划日常锻炼",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/opengym.png",
-          "internalUrl": "http://192.168.2.88:8686",
-          "externalUrl": "https://xl.ahlson.uk",
-          "type": "server"
-        }
-      ]
-    },
-    {
-      "name": "实用与娱乐",
-      "icon": "sparkles",
-      "items": [
-        {
           "name": "核算助手",
           "description": "核算工资和数据对照",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apache.png",
@@ -141,19 +102,11 @@
           "type": "server"
         },
         {
-          "name": "n8n",
-          "description": "工作流自动化",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/n8n.png",
-          "internalUrl": "http://192.168.2.88:5678",
-          "externalUrl": "https://n8n.ahlson.uk",
-          "type": "server"
-        },
-        {
-          "name": "SurveyKing",
-          "description": "问卷考试系统",
-          "icon": "https://surveyking.cn/favicon.ico",
-          "internalUrl": "http://192.168.2.88:1991",
-          "externalUrl": "https://surveyking.ahlson.uk",
+          "name": "PrivateBin",
+          "description": "临时文本分享",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/pastey.webp",
+          "internalUrl": "http://192.168.2.88:3003",
+          "externalUrl": "https://paste.ahlson.uk",
           "type": "server"
         },
         {
@@ -429,27 +382,11 @@
           "type": "bookmark"
         },
         {
-          "name": "Dashboard Icons",
-          "description": "图标库",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/dashboard-icons.png",
-          "internalUrl": "",
-          "externalUrl": "https://dashboardicons.com/",
-          "type": "bookmark"
-        },
-        {
           "name": "GitHub",
           "description": "GitHub",
           "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/github-dark.svg",
           "internalUrl": "",
           "externalUrl": "https://github.com/ahlson",
-          "type": "bookmark"
-        },
-        {
-          "name": "Gitee",
-          "description": "Gitee",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/gitee.png",
-          "internalUrl": "",
-          "externalUrl": "https://gitee.com/Ahlson",
           "type": "bookmark"
         },
         {
@@ -461,14 +398,6 @@
           "type": "bookmark"
         },
         {
-          "name": "Linux Do",
-          "description": "Linux Do 社区",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/linuxdo.png",
-          "internalUrl": "",
-          "externalUrl": "https://linux.do/",
-          "type": "bookmark"
-        },
-        {
           "name": "Docker Hub",
           "description": "Docker Hub",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/docker.png",
@@ -477,19 +406,19 @@
           "type": "bookmark"
         },
         {
-          "name": "Stack Overflow",
-          "description": "全球技术问答社区",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/bookstack.png",
+          "name": "Gitee",
+          "description": "Gitee",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/gitee.png",
           "internalUrl": "",
-          "externalUrl": "https://stackoverflow.com/",
+          "externalUrl": "https://gitee.com/Ahlson",
           "type": "bookmark"
         },
         {
-          "name": "Arch Wiki",
-          "description": "Linux 定制知识库",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/arch-linux.png",
+          "name": "Linux Do",
+          "description": "Linux Do 社区",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/linuxdo.png",
           "internalUrl": "",
-          "externalUrl": "https://wiki.archlinux.org/",
+          "externalUrl": "https://linux.do/",
           "type": "bookmark"
         },
         {
@@ -514,6 +443,30 @@
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-translate.png",
           "internalUrl": "",
           "externalUrl": "https://fanyi.baidu.com",
+          "type": "bookmark"
+        },
+        {
+          "name": "Dashboard Icons",
+          "description": "图标库",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/dashboard-icons.png",
+          "internalUrl": "",
+          "externalUrl": "https://dashboardicons.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Stack Overflow",
+          "description": "全球技术问答社区",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/bookstack.png",
+          "internalUrl": "",
+          "externalUrl": "https://stackoverflow.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Arch Wiki",
+          "description": "Linux 定制知识库",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/arch-linux.png",
+          "internalUrl": "",
+          "externalUrl": "https://wiki.archlinux.org/",
           "type": "bookmark"
         }
       ]
