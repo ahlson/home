@@ -67,7 +67,7 @@
           "name": "音乐",
           "description": "在线音乐服务",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
-          "internalUrl": "http://192.168.2.88:61226",
+          "internalUrl": "http://192.168.2.88:61226/music",
           "externalUrl": "https://music.ahlson.uk/music",
           "type": "server"
         }
