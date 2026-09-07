@@ -27,8 +27,16 @@
           "name": "Uptime Kuma",
           "description": "服务监控",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp",
-          "internalUrl": "http://192.168.2.88:3021",
+          "internalUrl": "",
           "externalUrl": "https://uptime.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "certimate",
+          "description": "自托管 SSL 证书工具",
+          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/certimate.png",
+          "internalUrl": "",
+          "externalUrl": "https://certimate.ahlson.uk/",
           "type": "server"
         },
         {
@@ -43,7 +51,7 @@
           "name": "思源笔记",
           "description": "本地优先的笔记软件",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/siyuan.svg",
-          "internalUrl": "http://192.168.2.88:6806",
+          "internalUrl": "",
           "externalUrl": "https://siyuan.ahlson.uk",
           "type": "server"
         },
@@ -51,24 +59,16 @@
           "name": "青龙面板",
           "description": "自动化任务面板",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/qinglong.png",
-          "internalUrl": "http://192.168.2.88:5700",
-          "externalUrl": "https://qinglong.ahlson.uk",
+          "internalUrl": "",
+          "externalUrl": "https://ql.ahlson.uk",
           "type": "server"
         },
         {
           "name": "Alist",
           "description": "文件管理与下载",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/alist.svg",
-          "internalUrl": "http://192.168.2.88:5244",
+          "internalUrl": "",
           "externalUrl": "https://alist.ahlson.uk",
-          "type": "server"
-        },
-        {
-          "name": "音乐",
-          "description": "在线音乐服务",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
-          "internalUrl": "http://192.168.2.88:61226/music",
-          "externalUrl": "https://music.ahlson.uk/music",
           "type": "server"
         }
       ]
@@ -110,11 +110,19 @@
           "type": "server"
         },
         {
-          "name": "道理鱼音乐",
-          "description": "道理鱼音乐站",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/youtube-music.png",
-          "internalUrl": "http://192.168.2.88:4000",
-          "externalUrl": "https://daoliyu.ahlson.uk",
+          "name": "fnos-media",
+          "description": "飞牛影视",
+          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/fnos-media.png",
+          "internalUrl": "",
+          "externalUrl": "https://fn.ahlson.uk/v",
+          "type": "server"
+        },
+        {
+          "name": "fnos-music",
+          "description": "飞牛音乐",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
+          "internalUrl": "",
+          "externalUrl": "https://fn.ahlson.uk/music",
           "type": "server"
         }
       ]
@@ -218,46 +226,6 @@
       "icon": "cloud",
       "items": [
         {
-          "name": "Apple",
-          "description": "Apple 官网",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple.png",
-          "internalUrl": "",
-          "externalUrl": "https://www.apple.com/",
-          "type": "bookmark"
-        },
-        {
-          "name": "阿里云",
-          "description": "阿里云控制台",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/aliyun.png",
-          "internalUrl": "",
-          "externalUrl": "https://home.console.aliyun.com/",
-          "type": "bookmark"
-        },
-        {
-          "name": "阿里云盘",
-          "description": "阿里云盘",
-          "icon": "https://img.alicdn.com/imgextra/i1/O1CN01JDQCi21Dc8EfbRwvF_!!6000000000236-73-tps-64-64.ico",
-          "internalUrl": "",
-          "externalUrl": "https://www.aliyundrive.com/drive",
-          "type": "bookmark"
-        },
-        {
-          "name": "百度网盘",
-          "description": "百度网盘",
-          "icon": "https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico",
-          "internalUrl": "",
-          "externalUrl": "https://pan.baidu.com/",
-          "type": "bookmark"
-        },
-        {
-          "name": "夸克网盘",
-          "description": "夸克网盘",
-          "icon": "https://pan.quark.cn/favicon.ico",
-          "internalUrl": "",
-          "externalUrl": "https://pan.quark.cn/",
-          "type": "bookmark"
-        },
-        {
           "name": "iCloud",
           "description": "Apple 云",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/icloud.png",
@@ -280,6 +248,30 @@
           "internalUrl": "",
           "externalUrl": "https://onedrive.live.com/",
           "type": "bookmark"
+        },
+        {
+          "name": "夸克网盘",
+          "description": "夸克网盘",
+          "icon": "https://pan.quark.cn/favicon.ico",
+          "internalUrl": "",
+          "externalUrl": "https://pan.quark.cn/",
+          "type": "bookmark"
+        },
+        {
+          "name": "阿里云盘",
+          "description": "阿里云盘",
+          "icon": "https://img.alicdn.com/imgextra/i1/O1CN01JDQCi21Dc8EfbRwvF_!!6000000000236-73-tps-64-64.ico",
+          "internalUrl": "",
+          "externalUrl": "https://www.aliyundrive.com/drive",
+          "type": "bookmark"
+        },
+        {
+          "name": "百度网盘",
+          "description": "百度网盘",
+          "icon": "https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico",
+          "internalUrl": "",
+          "externalUrl": "https://pan.baidu.com/",
+          "type": "bookmark"
         }
       ]
     },
@@ -287,6 +279,46 @@
       "name": "影音娱乐",
       "icon": "play",
       "items": [
+        {
+          "name": "YouTube",
+          "description": "YouTube",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/youtube.png",
+          "internalUrl": "",
+          "externalUrl": "https://www.youtube.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Bilibili",
+          "description": "B 站",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/bilibili.png",
+          "internalUrl": "",
+          "externalUrl": "https://space.bilibili.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "抖音",
+          "description": "抖音",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/tiktok.png",
+          "internalUrl": "",
+          "externalUrl": "https://www.douyin.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "腾讯视频",
+          "description": "腾讯视频",
+          "icon": "https://v.qq.com/favicon.ico",
+          "internalUrl": "",
+          "externalUrl": "https://v.qq.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "爱奇艺",
+          "description": "爱奇艺",
+          "icon": "https://www.iqiyi.com/favicon.ico",
+          "internalUrl": "",
+          "externalUrl": "https://www.iqiyi.com/",
+          "type": "bookmark"
+        },
         {
           "name": "SeedHub",
           "description": "影库",
@@ -304,14 +336,6 @@
           "type": "bookmark"
         },
         {
-          "name": "网易云",
-          "description": "网易云音乐",
-          "icon": "https://music.163.com/favicon.ico",
-          "internalUrl": "",
-          "externalUrl": "https://music.163.com/#/playlist?id=2249483798",
-          "type": "bookmark"
-        },
-        {
           "name": "HiFiNi",
           "description": "HiFi 音乐论坛",
           "icon": "https://hifini.net/view/img/logo.png",
@@ -320,43 +344,11 @@
           "type": "bookmark"
         },
         {
-          "name": "抖音",
-          "description": "抖音",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/tiktok.png",
+          "name": "网易云",
+          "description": "网易云音乐",
+          "icon": "https://music.163.com/favicon.ico",
           "internalUrl": "",
-          "externalUrl": "https://www.douyin.com/",
-          "type": "bookmark"
-        },
-        {
-          "name": "Bilibili",
-          "description": "B 站",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/bilibili.png",
-          "internalUrl": "",
-          "externalUrl": "https://space.bilibili.com/",
-          "type": "bookmark"
-        },
-        {
-          "name": "YouTube",
-          "description": "YouTube",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/youtube.png",
-          "internalUrl": "",
-          "externalUrl": "https://www.youtube.com/",
-          "type": "bookmark"
-        },
-        {
-          "name": "腾讯视频",
-          "description": "腾讯视频",
-          "icon": "https://v.qq.com/favicon.ico",
-          "internalUrl": "",
-          "externalUrl": "https://v.qq.com/",
-          "type": "bookmark"
-        },
-        {
-          "name": "爱奇艺",
-          "description": "爱奇艺",
-          "icon": "https://www.iqiyi.com/favicon.ico",
-          "internalUrl": "",
-          "externalUrl": "https://www.iqiyi.com/",
+          "externalUrl": "https://music.163.com/#/playlist?id=2249483798",
           "type": "bookmark"
         },
         {
@@ -422,35 +414,11 @@
           "type": "bookmark"
         },
         {
-          "name": "IT-Tools",
-          "description": "开发者工具箱",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/it-tools.svg",
-          "internalUrl": "",
-          "externalUrl": "https://it-tools.tech/",
-          "type": "bookmark"
-        },
-        {
-          "name": "Excalidraw",
-          "description": "手绘风格白板",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/excalidraw.png",
-          "internalUrl": "",
-          "externalUrl": "https://excalidraw.com",
-          "type": "bookmark"
-        },
-        {
           "name": "百度翻译",
           "description": "在线翻译",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-translate.png",
           "internalUrl": "",
           "externalUrl": "https://fanyi.baidu.com",
-          "type": "bookmark"
-        },
-        {
-          "name": "Dashboard Icons",
-          "description": "图标库",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/dashboard-icons.png",
-          "internalUrl": "",
-          "externalUrl": "https://dashboardicons.com/",
           "type": "bookmark"
         },
         {
@@ -467,6 +435,52 @@
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/arch-linux.png",
           "internalUrl": "",
           "externalUrl": "https://wiki.archlinux.org/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Dashboard Icons",
+          "description": "图标库",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/dashboard-icons.png",
+          "internalUrl": "",
+          "externalUrl": "https://dashboardicons.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "阿里云",
+          "description": "阿里云控制台",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/aliyun.png",
+          "internalUrl": "",
+          "externalUrl": "https://home.console.aliyun.com/",
+          "type": "bookmark"
+        }
+      ]
+    },
+    {
+      "name": "其他",
+      "icon": "🔧",
+      "items": [
+        {
+          "name": "Apple",
+          "description": "Apple 官网",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple.png",
+          "internalUrl": "",
+          "externalUrl": "https://www.apple.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "IT-Tools",
+          "description": "开发者工具箱",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/it-tools.svg",
+          "internalUrl": "",
+          "externalUrl": "https://it-tools.tech/",
+          "type": "bookmark"
+        },
+        {
+          "name": "Excalidraw",
+          "description": "手绘风格白板",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/excalidraw.png",
+          "internalUrl": "",
+          "externalUrl": "https://excalidraw.com",
           "type": "bookmark"
         }
       ]
