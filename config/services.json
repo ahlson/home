@@ -24,22 +24,6 @@
       "icon": "star",
       "items": [
         {
-          "name": "Uptime Kuma",
-          "description": "服务监控",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp",
-          "internalUrl": "",
-          "externalUrl": "https://uptime.ahlson.uk",
-          "type": "server"
-        },
-        {
-          "name": "certimate",
-          "description": "自托管 SSL 证书工具",
-          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/certimate.png",
-          "internalUrl": "",
-          "externalUrl": "https://certimate.ahlson.uk/",
-          "type": "server"
-        },
-        {
           "name": "Home Assistant",
           "description": "智能家居系统",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/home-assistant.png",
@@ -51,7 +35,7 @@
           "name": "思源笔记",
           "description": "本地优先的笔记软件",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/siyuan.svg",
-          "internalUrl": "",
+          "internalUrl": "http://192.168.2.88:6806",
           "externalUrl": "https://siyuan.ahlson.uk",
           "type": "server"
         },
@@ -59,7 +43,7 @@
           "name": "青龙面板",
           "description": "自动化任务面板",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/qinglong.png",
-          "internalUrl": "",
+          "internalUrl": "http://192.168.2.88:5700",
           "externalUrl": "https://ql.ahlson.uk",
           "type": "server"
         },
@@ -69,6 +53,22 @@
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/alist.svg",
           "internalUrl": "",
           "externalUrl": "https://alist.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "fnos-media",
+          "description": "飞牛影视",
+          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/fnos-media.png",
+          "internalUrl": "",
+          "externalUrl": "https://fn.ahlson.uk/v",
+          "type": "server"
+        },
+        {
+          "name": "fnos-music",
+          "description": "飞牛音乐",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
+          "internalUrl": "",
+          "externalUrl": "https://fn.ahlson.uk/music",
           "type": "server"
         }
       ]
@@ -107,22 +107,6 @@
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/pastey.webp",
           "internalUrl": "http://192.168.2.88:3003",
           "externalUrl": "https://paste.ahlson.uk",
-          "type": "server"
-        },
-        {
-          "name": "fnos-media",
-          "description": "飞牛影视",
-          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/fnos-media.png",
-          "internalUrl": "",
-          "externalUrl": "https://fn.ahlson.uk/v",
-          "type": "server"
-        },
-        {
-          "name": "fnos-music",
-          "description": "飞牛音乐",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
-          "internalUrl": "",
-          "externalUrl": "https://fn.ahlson.uk/music",
           "type": "server"
         }
       ]
