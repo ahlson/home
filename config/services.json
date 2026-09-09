@@ -24,6 +24,14 @@
       "icon": "star",
       "items": [
         {
+          "name": "Uptime Kuma",
+          "description": "服务监控",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp",
+          "internalUrl": "http://192.168.2.88:3021",
+          "externalUrl": "https://uptime.ahlson.uk",
+          "type": "server"
+        },
+        {
           "name": "Home Assistant",
           "description": "智能家居系统",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/home-assistant.png",
@@ -48,14 +56,6 @@
           "type": "server"
         },
         {
-          "name": "Alist",
-          "description": "文件管理与下载",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/alist.svg",
-          "internalUrl": "",
-          "externalUrl": "https://alist.ahlson.uk",
-          "type": "server"
-        },
-        {
           "name": "fnos-media",
           "description": "飞牛影视",
           "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/fnos-media.png",
@@ -77,6 +77,14 @@
       "name": "工具",
       "icon": "database",
       "items": [
+        {
+          "name": "Alist",
+          "description": "文件管理与下载",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/alist.svg",
+          "internalUrl": "",
+          "externalUrl": "https://alist.ahlson.uk",
+          "type": "server"
+        },
         {
           "name": "训练",
           "description": "计划日常锻炼",
