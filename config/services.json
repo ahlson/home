@@ -24,11 +24,19 @@
       "icon": "star",
       "items": [
         {
-          "name": "Uptime Kuma",
-          "description": "服务监控",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp",
-          "internalUrl": "http://192.168.2.88:3021",
-          "externalUrl": "https://uptime.ahlson.uk",
+          "name": "Alist",
+          "description": "文件管理与下载",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/alist.svg",
+          "internalUrl": "",
+          "externalUrl": "https://alist.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "青龙面板",
+          "description": "自动化任务面板",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/qinglong.png",
+          "internalUrl": "http://192.168.2.88:5700",
+          "externalUrl": "https://ql.ahlson.uk",
           "type": "server"
         },
         {
@@ -48,18 +56,10 @@
           "type": "server"
         },
         {
-          "name": "青龙面板",
-          "description": "自动化任务面板",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/qinglong.png",
-          "internalUrl": "http://192.168.2.88:5700",
-          "externalUrl": "https://ql.ahlson.uk",
-          "type": "server"
-        },
-        {
           "name": "fnos-media",
           "description": "飞牛影视",
           "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/fnos-media.png",
-          "internalUrl": "",
+          "internalUrl": "http://192.168.2.109:5666/v",
           "externalUrl": "https://fn.ahlson.uk/v",
           "type": "server"
         },
@@ -67,7 +67,7 @@
           "name": "fnos-music",
           "description": "飞牛音乐",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
-          "internalUrl": "",
+          "internalUrl": "http://192.168.2.109:5666/music",
           "externalUrl": "https://fn.ahlson.uk/music",
           "type": "server"
         }
@@ -78,11 +78,19 @@
       "icon": "database",
       "items": [
         {
-          "name": "Alist",
-          "description": "文件管理与下载",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/alist.svg",
-          "internalUrl": "",
-          "externalUrl": "https://alist.ahlson.uk",
+          "name": "Uptime Kuma",
+          "description": "服务监控",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp",
+          "internalUrl": "http://192.168.2.88:3021",
+          "externalUrl": "https://uptime.ahlson.uk",
+          "type": "server"
+        },
+        {
+          "name": "komari",
+          "description": "轻量级服务器监控工具",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/ookla-speedtest.png",
+          "internalUrl": "http://192.168.2.88:25774/",
+          "externalUrl": "https://komari.ahlson.uk/",
           "type": "server"
         },
         {
@@ -209,6 +217,14 @@
           "icon": "https://sf-coze-web-cdn.coze.com/obj/coze-web-sg/obric/coze/favicon.1970.png",
           "internalUrl": "",
           "externalUrl": "https://www.coze.com/",
+          "type": "bookmark"
+        },
+        {
+          "name": "阿里云",
+          "description": "阿里云控制台",
+          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/aliyun.png",
+          "internalUrl": "",
+          "externalUrl": "https://home.console.aliyun.com/",
           "type": "bookmark"
         }
       ]
@@ -435,14 +451,6 @@
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/dashboard-icons.png",
           "internalUrl": "",
           "externalUrl": "https://dashboardicons.com/",
-          "type": "bookmark"
-        },
-        {
-          "name": "阿里云",
-          "description": "阿里云控制台",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/aliyun.png",
-          "internalUrl": "",
-          "externalUrl": "https://home.console.aliyun.com/",
           "type": "bookmark"
         }
       ]
