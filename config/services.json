@@ -28,7 +28,7 @@
           "description": "文件管理与下载",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/alist.svg",
           "internalUrl": "",
-          "externalUrl": "https://alist.ahlson.uk",
+          "externalUrl": "http://8.162.24.212:2580",
           "type": "server"
         },
         {
@@ -59,16 +59,16 @@
           "name": "fnos-media",
           "description": "飞牛影视",
           "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/fnos-media.png",
-          "internalUrl": "http://192.168.2.109:5666/v",
-          "externalUrl": "https://fn.ahlson.uk/v",
+          "internalUrl": "",
+          "externalUrl": "http://8.162.24.212:2580/v",
           "type": "server"
         },
         {
           "name": "fnos-music",
           "description": "飞牛音乐",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
-          "internalUrl": "http://192.168.2.109:5666/music",
-          "externalUrl": "https://fn.ahlson.uk/music",
+          "internalUrl": "",
+          "externalUrl": "http://8.162.24.212:2580/music",
           "type": "server"
         }
       ]
@@ -94,14 +94,6 @@
           "type": "server"
         },
         {
-          "name": "训练",
-          "description": "计划日常锻炼",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/opengym.png",
-          "internalUrl": "http://192.168.2.88:8686",
-          "externalUrl": "https://xl.ahlson.uk",
-          "type": "server"
-        },
-        {
           "name": "刷题系统",
           "description": "在线刷题练习",
           "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/openbooks.png",
@@ -115,14 +107,6 @@
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apache.png",
           "internalUrl": "http://192.168.2.88:9981",
           "externalUrl": "https://zxh.ahlson.uk",
-          "type": "server"
-        },
-        {
-          "name": "PrivateBin",
-          "description": "临时文本分享",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/pastey.webp",
-          "internalUrl": "http://192.168.2.88:3003",
-          "externalUrl": "https://paste.ahlson.uk",
           "type": "server"
         }
       ]
