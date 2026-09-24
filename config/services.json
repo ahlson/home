@@ -81,16 +81,16 @@
           "name": "Uptime Kuma",
           "description": "服务监控",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp",
-          "internalUrl": "http://192.168.2.88:3021",
+          "internalUrl": "",
           "externalUrl": "https://uptime.ahlson.uk",
           "type": "server"
         },
         {
           "name": "komari",
-          "description": "轻量级服务器监控工具",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/ookla-speedtest.png",
-          "internalUrl": "http://192.168.2.88:25774/",
-          "externalUrl": "https://komari.ahlson.uk/",
+          "description": "服务器监控工具",
+          "icon": "https://raw.githubusercontent.com/ahlson/CF-Server-Monitor/19af7d1d32f4495e276cc81dd8b1617a9df8fb6a/public/files/logo.svg",
+          "internalUrl": "",
+          "externalUrl": "https://monitor.ahlson.uk/",
           "type": "server"
         },
         {
