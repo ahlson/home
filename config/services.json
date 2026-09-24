@@ -50,9 +50,9 @@
         {
           "name": "思源笔记",
           "description": "本地优先的笔记软件",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/siyuan.svg",
-          "internalUrl": "http://192.168.2.88:6806",
-          "externalUrl": "https://siyuan.ahlson.uk",
+          "icon": "https://raw.githubusercontent.com/ahlson/inkstone/c146593f0c2153431433260d0377622906f17e42/public/inkstone-logo.svg",
+          "internalUrl": "",
+          "externalUrl": "https://md.ahlson.uk",
           "type": "server"
         },
         {
