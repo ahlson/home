@@ -48,8 +48,8 @@
           "type": "server"
         },
         {
-          "name": "思源笔记",
-          "description": "本地优先的笔记软件",
+          "name": "Inkstone",
+          "description": "私有 Markdown 笔记本",
           "icon": "https://raw.githubusercontent.com/ahlson/inkstone/c146593f0c2153431433260d0377622906f17e42/public/inkstone-logo.svg",
           "internalUrl": "",
           "externalUrl": "https://md.ahlson.uk",
