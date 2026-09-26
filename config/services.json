@@ -86,7 +86,7 @@
           "type": "server"
         },
         {
-          "name": "komari",
+          "name": "monitor",
           "description": "服务器监控工具",
           "icon": "https://raw.githubusercontent.com/ahlson/CF-Server-Monitor/19af7d1d32f4495e276cc81dd8b1617a9df8fb6a/public/files/logo.svg",
           "internalUrl": "",
