@@ -56,28 +56,6 @@
           "type": "server"
         },
         {
-          "name": "fnos-media",
-          "description": "飞牛影视",
-          "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/fnos-media.png",
-          "internalUrl": "",
-          "externalUrl": "http://8.162.24.212:2580/v",
-          "type": "server"
-        },
-        {
-          "name": "fnos-music",
-          "description": "飞牛音乐",
-          "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apple-music.png",
-          "internalUrl": "",
-          "externalUrl": "http://8.162.24.212:2580/music",
-          "type": "server"
-        }
-      ]
-    },
-    {
-      "name": "工具",
-      "icon": "database",
-      "items": [
-        {
           "name": "Uptime Kuma",
           "description": "服务监控",
           "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/uptime-kuma.webp",
@@ -92,13 +70,19 @@
           "internalUrl": "",
           "externalUrl": "https://monitor.ahlson.uk/",
           "type": "server"
-        },
+        }
+      ]
+    },
+    {
+      "name": "工具",
+      "icon": "database",
+      "items": [
         {
           "name": "刷题系统",
           "description": "在线刷题练习",
           "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/png/openbooks.png",
-          "internalUrl": "http://192.168.2.88:301",
-          "externalUrl": "https://st.ahlson.uk",
+          "internalUrl": "",
+          "externalUrl": "http://47.99.144.212:3000",
           "type": "server"
         },
         {
